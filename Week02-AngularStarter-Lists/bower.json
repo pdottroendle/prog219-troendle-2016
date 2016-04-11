@@ -1,0 +1,23 @@
+{
+  "name": "angular-lists",
+  "authors": [
+    "Charles Calvert"
+  ],
+  "description": "lean angular",
+  "main": "",
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "homepage": "www.elvenware.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.3"
+  }
+}

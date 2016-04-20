@@ -1,0 +1,27 @@
+{
+  "name": "Week03-AngularRoutes",
+  "description": "week03-angular-routes",
+  "main": "Angular Routes",
+  "authors": [
+    "Peter Troendle <pdottroendle@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Angular",
+    "Routes"
+  ],
+  "homepage": "www.elevenware.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "bootstrap": "^3.3.6"
+  }
+}

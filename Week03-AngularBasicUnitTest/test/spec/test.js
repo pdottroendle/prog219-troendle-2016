@@ -29,15 +29,15 @@ describe('Integration Tests', function() {
     }); 
         
     it('should get nine', function() {
-        expect(elvenController.getNine()).toBe(9);
+        expect(elvenController.getNine(9)).toBe(9);
     });  
     
-        it('should get Square', function() {
-        expect(elvenController.getSquare()).toBe(25);
+    it('should get Square', function() {
+        expect(elvenController.getSquare(5)).toBe(25);
     });  
     
-        it('should get Add', function() {
-        expect(elvenController.getAdd()).toBe(5);
+    it('should get Add', function() {
+      expect(elvenController.getAdd(2,3)).toBe(5);
     });  
     
     

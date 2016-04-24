@@ -11,25 +11,18 @@
 
         elvenController.hint = "My hint.";
         
-        elvenController.getNine = function() {
-            return 9;
+        elvenController.getNine = function(operandA) {
+            return operandA;
         };
         
-        elvenController.getSquare = function() {
-            var Five = 5;
-            var result = Five*Five;
-            return result;
+        elvenController.getSquare = function(operandA) {
+            return operandA*operandA;
         };
         
-        elvenController.getAdd = function() {
-            var Two = 2;
-            var Three = 3;
-            var result = Two + Three;
-            return result;
+        elvenController.getAdd = function(operandA,operandB) {
+            return operandA+operandB;
         };
-        
-        
-        
+     
     });
 
 })();

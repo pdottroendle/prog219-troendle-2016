@@ -10,8 +10,12 @@ block content
       li(ng-class="{ active: isActive('/about')}")
        a(ng-href='#/about') About
   .container
-  h1= title
-  p Welcome to #{title}
-
-  h1 The View
-  div(data-ng-view="")
+   h1= title
+   p Welcome to #{title}
+   h1 The View
+   div(data-ng-view="")
+   
+   .footer
+    p
+    span.glyphicon.glyphicon-grain
+    |  from Elvenware

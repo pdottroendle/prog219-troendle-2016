@@ -57,4 +57,4 @@ console.log(calculator.mulMe(0.5,6));
 sublayout('Divider 70/8');
 console.log(calculator.divMe(70,8));
 
-layout('Thank You!');
+layout('Thank You !');

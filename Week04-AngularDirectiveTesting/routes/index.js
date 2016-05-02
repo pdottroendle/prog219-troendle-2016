@@ -9,7 +9,6 @@ router.get('/', function(req, res, next) {
     });
 });
 
-
 router.get('/:id', function(req, res, nest) {
     'use strict';
     res.render(req.params.id, {

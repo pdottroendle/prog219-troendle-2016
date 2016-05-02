@@ -21,13 +21,10 @@ elfApp.directive('bar', function() {
     };
 });
 
-
 elfApp.directive('elfMarie', function() {
-    'use strict';
+      'use strict';
     return {
         controller: 'MainController',
         templateUrl: 'marie'
     };
 });
-/*$(document).ready(function() { 'use strict'; 
-});*/

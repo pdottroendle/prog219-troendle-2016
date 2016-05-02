@@ -10,9 +10,9 @@ module.exports = function(config) {
         frameworks: ['jasmine'],
 
         files: [
+            'public/components/jquery/dist/jquery.min.js',
             'public/components/angular/angular.js',
             'public/components/angular-mocks/angular-mocks.js',
-            'public/components/jquery/dist/jquery.min.js',
             'node_modules/jasmine-jquery/lib/*.js',
             'public/javascripts/*.js',
             'spec/**/*.html',

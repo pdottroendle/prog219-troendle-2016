@@ -8,6 +8,10 @@ Prog 209 in spring 2016 at Bellevue College
 
 [solar-start]:http://www.ccalvert.net/books/CloudNotes/Assignments/AngularSolarStarter.html
 
+## Week 06 Branch
+
+- [Angular Solar Starter Tests Assignment][solar-start-test]
+[solar-start-test]:http://www.ccalvert.net/books/CloudNotes/Assignments/AngularSolarStarter.html
      ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
     '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
     |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 

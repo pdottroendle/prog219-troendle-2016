@@ -1,3 +1,4 @@
+/*global inject*/
 describe('Elvenware Simple Plain Suite', function() {
 
     'use strict';
@@ -29,18 +30,18 @@ describe('Elvenware Simple Plain Suite', function() {
         loadFixtures('Renewable.html');
     });
 
-    fit('should find the index', function() {
-        expect(scope.index).toBe(0);
-    });
+fit('should find the index', function() {
+    expect( scope.index).toBe(0);
+});
 
-    fit('should have a getRenewable method ', function() {
-        expect(scope.getRenewable).toBeDefined();
-    });
+fit('should have a getRenewable method ', function() {
+    expect(scope.getRenewable).toBeDefined();
+});
 
-    it('should be possible to access the fixture', function() {
-        var spanElement = document.getElementById('renewable');
-        expect(spanElement).toBeDefined();
-    });
+it('should be possible to access the fixture', function() {
+    var spanElement = document.getElementById('renewable');
+    expect(spanElement).toBeDefined();        
+});
 
     it('should be possible to access the renewable fixture', function() {
         var spanElement = document.getElementById('renewable');

@@ -7,8 +7,7 @@ myModule.config(function($routeProvider, $locationProvider) {
         controller: "MainController"
     }).when('/about', {
         templateUrl: "about",
-        controller: "AboutController",
-        controllerAs: 'aboutController'
+        controller: "AboutController"
     }).otherwise({
         redirectTo: '/'
     });

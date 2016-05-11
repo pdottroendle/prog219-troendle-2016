@@ -27,8 +27,8 @@
     "jasmine-jquery": "^2.1.1",
     "jshint-stylish": "^2.0.1",
     "karma": "~0.13.10",
-    "karma-jasmine": "~0.3.3",
+    "karma-jasmine": "^1.0.2",
     "karma-phantomjs-launcher": "^1.0.0",
-    "karma-spec-reporter": "~0.0.23"
+    "karma-spec-reporter": "0.0.26"
   }
 }

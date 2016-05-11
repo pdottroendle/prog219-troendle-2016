@@ -12,8 +12,8 @@ $scope.getRenewable = function() {
         .then(function(res){
             console.log(res.data[0]);
             $scope.renewable = res.data;
-        }); 
-    }
+        });
+}
 });
 
 elfApp.directive('elfRenewable', function() {

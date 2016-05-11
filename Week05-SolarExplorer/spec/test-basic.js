@@ -30,27 +30,27 @@ describe('Elvenware Simple Plain Suite', function() {
         loadFixtures('Renewable.html');
     });
 
-fit('should find the index', function() {
-    expect( scope.index).toBe(0);
-});
+    fit('expects true to be true', function() {
+        expect(true).toBe(true);
+    });
 
-fit('should have a getRenewable method ', function() {
-    expect(scope.getRenewable).toBeDefined();
-});
+    it('should find the index', function() {
+        expect(scope.index).toBe(0);
+    });
 
-it('should be possible to access the fixture', function() {
-    var spanElement = document.getElementById('renewable');
-    expect(spanElement).toBeDefined();        
-});
+    it('should have a getRenewable method ', function() {
+        expect(scope.getRenewable).toBeDefined();
+    });
+
+    it('should be possible to access the fixture', function() {
+        var spanElement = document.getElementById('renewable');
+        expect(spanElement).toBeDefined();
+    });
 
     it('should be possible to access the renewable fixture', function() {
         var spanElement = document.getElementById('renewable');
         expect(spanElement).toBeDefined();
         expect(spanElement.innerHTML).toContain('Year');
-    });
-
-    it('expects true to be true', function() {
-        expect(true).toBe(true);
     });
 
     it('tests scope variable access in template loaded through raw text', function() {
@@ -73,6 +73,7 @@ it('should be possible to access the fixture', function() {
         expect(element.text()).toContain('2.5859957');
     });
 
+
     it('tests scope variable access in template loaded through fixture', function() {
         // Get element from fixture
         scope.renewable = [{
@@ -93,6 +94,7 @@ it('should be possible to access the fixture', function() {
         scope.$digest();
         // Check that the compiled element contains the templated content
         expect(element.text()).toContain('2.5859957');
+
     });
 
 });

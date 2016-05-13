@@ -12,3 +12,4 @@ npm install karma-phantomjs-launcher --save-dev
 npm install karma-spec-reporter --save-dev
 npm install -g phantomjs-prebuilt
 karma start
+ bower install bootstrap angular angular-mocks --save

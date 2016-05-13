@@ -1,4 +1,3 @@
-/*global inject*/
 describe('Elvenware Simple Plain Suite', function() {
 
     'use strict';
@@ -30,10 +29,6 @@ describe('Elvenware Simple Plain Suite', function() {
         loadFixtures('Renewable.html');
     });
 
-    fit('expects true to be true', function() {
-        expect(true).toBe(true);
-    });
-
     it('should find the index', function() {
         expect(scope.index).toBe(0);
     });
@@ -53,18 +48,31 @@ describe('Elvenware Simple Plain Suite', function() {
         expect(spanElement.innerHTML).toContain('Year');
     });
 
+    it('expects true to be true', function() {
+        expect(true).toBe(true);
+    });
+
     it('tests scope variable access in template loaded through raw text', function() {
-        $templateCache.put('renewable',
-            '<div id="renewable">' +
-            '   <p><span class="caption">Year</span>: {{renewable.Year}}</p>' +
-            '   <p><span class="caption">Solar (quadrillion Btu)</span>: {{renewable.Solar (quadrillion Btu)}}</p>' +
-            '   <p><span class="caption">Geothermal (quadrillion Btu)</span>: {{renewable.Geothermal (quadrillion Btu)}}</p>' +
-            '   <p><span class="caption">Other biomass (quadrillion Btu)</span>: {{renewable.Other biomass (quadrillion Btu)}}</p>' +
-            '   <p><span class="caption">Wind power (quadrillion Btu)</span>: {{renewable.Wind power (quadrillion Btu)}}</p>' +
-            '   <p><span class="caption">Liquid biofuels (quadrillion Btu)</span>: {{renewable.Liquid biofuels (quadrillion Btu)}}</p>' +
-            '   <p><span class="caption">Wood biomass (quadrillion Btu)</span>: {{renewable.Wood biomass (quadrillion Btu)}}</p>' +
-            '   <p><span class="caption">Hydropower (quadrillion Btu)</span>: {{renewable.Hydropower (quadrillion Btu)}}</p>' +
-            '</div>');
+
+        scope.renewable = [{
+            'Year': '2017',
+            'Solar (quadrillion Btu)': '0.8045307',
+            'Geothermal (quadrillion Btu)': '0.2349284',
+            'Other biomass (quadrillion Btu)': '0.50916',
+            'Wind power (quadrillion Btu)': '2.202328',
+            'Liquid biofuels (quadrillion Btu)': '1.2329197',
+            'Wood biomass (quadrillion Btu)': '1.9860924',
+            'Hydropower (quadrillion Btu)': '2.5859957'
+        }];
+
+        $templateCache.put('renewable', '<div id="renewable">First: {{renewable[index].Year}}' +
+            '<br/>Solar: {{renewable[index]["Solar (quadrillion Btu)"]}}' +
+            '<br/>Geothermal: {{renewable[index]["Geothermal (quadrillion Btu)"]}}' +
+            '<br/>Other biomass: {{renewable[index]["Other biomass (quadrillion Btu)"]}}' +
+            '<br/>Wind power: {{renewable[index]["Wind power (quadrillion Btu)"]}}' +
+            '<br/>Liquid biofuels: {{renewable[index]["Liquid biofuels (quadrillion Btu)"]}}' +
+            '<br/>Wood biomass: {{renewable[index]["Wood biomass (quadrillion Btu)"]}}' +
+            '<br/>Hydropower: {{renewable[index]["Hydropower (quadrillion Btu)"]}}</div>');
 
         var element = $compile('<elf-renewable></elf-renewable>')(scope);
         scope.$digest();
@@ -72,7 +80,6 @@ describe('Elvenware Simple Plain Suite', function() {
         // Check that the compiled element contains the templated content
         expect(element.text()).toContain('2.5859957');
     });
-
 
     it('tests scope variable access in template loaded through fixture', function() {
         // Get element from fixture
@@ -94,7 +101,6 @@ describe('Elvenware Simple Plain Suite', function() {
         scope.$digest();
         // Check that the compiled element contains the templated content
         expect(element.text()).toContain('2.5859957');
-
     });
 
 });

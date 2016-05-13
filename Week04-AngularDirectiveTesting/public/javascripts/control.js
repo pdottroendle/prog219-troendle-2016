@@ -1,5 +1,5 @@
 /*global angular*/
-var elfApp = angular.module('elfApp', []);
+/*var elfApp = angular.module('elfApp', []);
 
 elfApp.controller('MainController', function($scope) {
     'use strict';
@@ -28,3 +28,4 @@ elfApp.directive('elfMarie', function() {
         templateUrl: 'marie'
     };
 });
+*/

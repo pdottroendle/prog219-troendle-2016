@@ -1,3 +1,39 @@
+describe('Elvenware Test Mocks Suite', function() {
+
+    'use strict';
+
+    var $httpBackend;
+    var scope;
+    var mainController;
+
+    // Set up the module
+    beforeEach(module('elfApp'));
+
+    beforeEach(inject(function(_$compile_, _$rootScope_, _$httpBackend_, _$controller_) {
+        scope = _$rootScope_.$new();
+        var $compile = _$compile_;
+        $httpBackend = _$httpBackend_;
+        mainController = _$controller_('MainController', {
+            $scope: scope
+        });
+    }));
+
+    afterEach(function() {
+        $httpBackend.verifyNoOutstandingExpectation();
+        $httpBackend.verifyNoOutstandingRequest();
+    });
+
+    it('proves we can run tests', function() {
+       expect(true).toBe(true);
+    });
+
+    it('should find the index', function() {
+      expect(scope.index).toBe(0);
+    });
+
+});
+
+/*
 describe('Elvenware Simple Plain Suite', function() {
 
     'use strict';
@@ -54,3 +90,5 @@ describe('Elvenware Simple Plain Suite', function() {
 
     })
 });
+
+*/

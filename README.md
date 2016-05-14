@@ -1,6 +1,6 @@
 # Prog219 Troendle
 
-Prog 219 in spring 2016 at Bellevue College
+Prog 209 in spring 2016 at Bellevue College
 
 ## Branch Master
 
@@ -9,7 +9,6 @@ Prog 219 in spring 2016 at Bellevue College
 [solar-start]:http://www.ccalvert.net/books/CloudNotes/Assignments/AngularSolarStarter.html
 
 
-=======
 
 
      ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.

@@ -2,7 +2,7 @@
 
 Prog 209 in spring 2016 at Bellevue College
 
-## Branch Master
+## Branch week05
 
 - [Angular Solar Starter Assignment][solar-start]
 

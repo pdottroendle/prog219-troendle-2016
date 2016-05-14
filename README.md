@@ -2,11 +2,14 @@
 
 Prog 219 in spring 2016 at Bellevue College
 
-## Week 05 Branch
+## Branch Master
 
--[Angular Solar Starter Assignment][solar-start]
+- [Angular Solar Starter Assignment][solar-start]
 
 [solar-start]:http://www.ccalvert.net/books/CloudNotes/Assignments/AngularSolarStarter.html
+
+
+=======
 
 
      ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.

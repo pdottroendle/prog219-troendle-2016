@@ -1,4 +1,5 @@
 /*global angular*/
+/*
 var elfApp = angular.module('elfApp', []);
 
 elfApp.controller('MainController', function($scope) {
@@ -28,3 +29,4 @@ elfApp.directive('elfMarie', function() {
         templateUrl: 'marie'
     };
 });
+*/

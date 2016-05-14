@@ -1,24 +1,29 @@
 {
-  "name": "elven-project",
-  "version": "0.0.0",
+  "name": "Week05-SolarExplorer",
+  "description": "Angular Routes SolarExplorer",
+  "main": "SolarExplorer",
   "authors": [
-    "Charlie Calvert"
+    "Peter Troendle <pdottroendle@gmail.com>"
   ],
-  "description": "Angular Unit Tests",
-  "keywords": [],
   "license": "MIT",
-  "homepage": "http://www.elvenware.com",
+  "keywords": [
+    "SolarExplorer",
+    "Angular",
+    "Routes"
+  ],
+  "homepage": "www.elevenware.com",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
+    "public/components",
     "test",
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.6",
     "angular": "^1.5.5",
+    "angular-route": "^1.5.5",
     "angular-mocks": "^1.5.5",
-    "angular-route": "^1.5.5"
+    "bootstrap": "^3.3.6"
   }
 }

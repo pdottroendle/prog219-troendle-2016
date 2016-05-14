@@ -1,22 +1,17 @@
 # Prog219 Troendle
 
-Prog 209 in spring 2016 at Bellevue College
+Prog 219 in spring 2016 at Bellevue College
 
-## Branch Master
+## Week 05 Branch
 
 - [Angular Solar Starter Assignment][solar-start]
 
 [solar-start]:http://www.ccalvert.net/books/CloudNotes/Assignments/AngularSolarStarter.html
 
-<<<<<<< HEAD
 ## Week 06 Branch
 
 - [Angular Solar Starter Tests Assignment][solar-start-test]
-[solar-start-test]:http://www.ccalvert.net/books/CloudNotes/Assignments/AngularSolarStarter.html
-=======
-
-
->>>>>>> master
+[solar-start-test]:http://www.ccalvert.net/books/CloudNotes/Assignments/AngularSolarStarterTests.html
 
      ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
     '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'

@@ -1,8 +1,0 @@
-{
-  "name": "angulartest",
-  "version": "0.0.2",
-  "dependencies": {
-    "jasmine-core": "^2.4.1"
-  },
-  "devDependencies": {}
-}

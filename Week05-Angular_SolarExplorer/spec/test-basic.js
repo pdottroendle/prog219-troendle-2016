@@ -29,6 +29,10 @@ describe('Elvenware Simple Plain Suite', function() {
         loadFixtures('Renewable.html');
     });
 
+    it('expects true to be true', function() {
+        expect(true).toBe(true);
+    });
+    
     it('should find the index', function() {
         expect(scope.index).toBe(0);
     });
@@ -42,17 +46,13 @@ describe('Elvenware Simple Plain Suite', function() {
         expect(spanElement).toBeDefined();
     });
 
-    it('should be possible to access the renewable fixture', function() {
+    it('tests template loaded through simple raw text', function() {
         var spanElement = document.getElementById('renewable');
         expect(spanElement).toBeDefined();
         expect(spanElement.innerHTML).toContain('Year');
     });
 
-    it('expects true to be true', function() {
-        expect(true).toBe(true);
-    });
-
-    it('tests scope variable access in template loaded through raw text', function() {
+    it('tests template loaded through more complex raw text', function() {
 
         scope.renewable = [{
             'Year': '2017',

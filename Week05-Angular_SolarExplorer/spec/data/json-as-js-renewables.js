@@ -15,7 +15,7 @@ var renewables = [{
         "Wind power (quadrillion Btu)": "2.0395132492",
         "Liquid biofuels (quadrillion Btu)": "1.2406718727",
         "Wood biomass (quadrillion Btu)": "1.9724914",
-         "Hydropower (quadrillion Btu)": "2.5965158"
+        "Hydropower (quadrillion Btu)": "2.5965158"
     },{
         "Year": "2015",
         "Solar (quadrillion Btu)": "0.532293912",

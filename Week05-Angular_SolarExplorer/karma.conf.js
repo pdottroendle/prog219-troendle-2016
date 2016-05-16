@@ -21,6 +21,7 @@ module.exports = function(config) {
             'spec/data/*.js',
             'spec/test*.js'
         ],
+        
         // list of files to exclude
         exclude: [],
 

@@ -12,20 +12,35 @@ function RenewableUtils() {
     };
 
     this.getItemCount = function() {
-        // YOUR CODE HERE
+          return renewables.length;
     };
 
     this.getByIndex = function(index) {
-        // YOUR CODE HERE
+        return renewables[index];
     };
 
     this.getYears = function() {
         return renewables.map(function(renewable) {
-            return renewable.Year;
+            return renewable.Year ;
         });
     };
 
-    // YOU WRITE THE LASt TWO METHODS
+    this.getSimpleFormat = function() {
+        return renewables.map(function(renewable) {
+        return  { geo : Number(renewable['Geothermal (quadrillion Btu)']) , 
+                  wind : Number(renewable['Wind power (quadrillion Btu)']) ,
+                  solar : Number(renewable['Solar (quadrillion Btu)']) } ;
+        });
+    };
+    
+    this.getSimpleStringFormat = function() {
+        return renewables.map(function(renewable) {
+        return  { geo : String(renewable['Geothermal (quadrillion Btu)']) , 
+                  wind : String(renewable['Wind power (quadrillion Btu)']) ,
+                  solar : String(renewable['Solar (quadrillion Btu)']) };
+        });
+    };
+    
 }
 
 elfApp.service('renewableUtils', RenewableUtils);

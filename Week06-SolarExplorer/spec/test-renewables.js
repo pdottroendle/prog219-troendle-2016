@@ -18,6 +18,7 @@ describe('Renewables Suite', function() {
     }));
 
     beforeEach(function() {        
+        //scope.index = 5;
         var requestHandler = $httpBackend
             .when('GET', 'data/Renewable.json')
             .respond(renewables);
@@ -67,6 +68,7 @@ describe('Renewables Suite', function() {
         keys.sort();
         expect(keys).toEqual(['geo', 'solar', 'wind']);
     });
+    
 
     it('proves that getSimpleStringFormat returns the expected string data', function() {
         var simpleFormat = scope.renewableUtils.getSimpleStringFormat();

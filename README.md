@@ -15,6 +15,9 @@ Prog 219 in spring 2016 at Bellevue College
 
 note: the week 06 branch uses the Week05-SolarExplorer folder and the name was corrected to Week05-Angular_SolarExplorer
 
+
+
+
      ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
     '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
     |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 

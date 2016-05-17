@@ -19,6 +19,15 @@ $scope.index = 0;
      };
 
 })
+$scope.getRenewable = function() {        
+    $http.get('data/Renewable.json')
+        .then(function(res) {
+            renewableUtils.init(res.data);
+            $scope.renewable = res.data;
+            $scope.renewableUtils = renewableUtils;
+            $scope.simpleFormat = renewableUtils.getSimpleFormat();
+        });
+};
 
 elfApp.directive('elfRenewable', function() {
     'use strict';
@@ -26,4 +35,17 @@ elfApp.directive('elfRenewable', function() {
         controller: 'MainController',
         templateUrl: 'renewable'
     };
+});
+
+
+elfApp.directive('elfSimpleFormat', function() {
+  'use strict';
+  return {
+      controller: 'MainController',
+              templateUrl: 'simple-format'
+              
+              /*template: 'Solar: {{simpleFormat[index].solar}}' +
+          '<br>Geo: {{simpleFormat[index].geo}}' +
+          '<br>Wind: {{simpleFormat[index].wind}}' */
+  };
 });

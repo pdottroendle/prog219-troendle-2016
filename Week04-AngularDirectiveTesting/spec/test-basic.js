@@ -29,14 +29,14 @@ describe('Elvenware Simple Plain Suite', function() {
         loadFixtures('marie.html');
     });
 
+    it('expects true to be true', function() {
+        expect(true).toBe(true);
+    });
+    
     it('should be possible to access the marie fixture', function() {
         var spanElement = document.getElementById('marie');
         expect(spanElement).toBeDefined();
         expect(spanElement.innerHTML).toContain('First');
-    });
-
-    it('expects true to be true', function() {
-        expect(true).toBe(true);
     });
 
     it('tests scope variable access in template loaded through raw text', function() {

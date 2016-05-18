@@ -18,9 +18,10 @@ module.exports = function(config) {
             'public/javascripts/app.js',
             'public/javascripts/*.js',
             'spec/**/*.html',
-            //'spec/data/*.js',     removed so its like the file of our instructor
+            'spec/data/*.js',
             'spec/test*.js'
         ],
+        
         // list of files to exclude
         exclude: [],
 

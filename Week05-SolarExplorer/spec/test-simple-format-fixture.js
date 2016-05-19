@@ -38,7 +38,7 @@ describe('Simple Format Fixture Suite', function() {
     });
 
     it('should be possible to access the fixture', function() {
-        var simpleFormatHtml = document.getElementById('simpleFormat');
+        var simpleFormatHtml = document.getElementById('SimpleFormat');
         console.log(simpleFormatHtml);
         expect(simpleFormatHtml.innerHTML).toContain('Solar:');
         expect(simpleFormatHtml.innerHTML).toContain('Geo:');

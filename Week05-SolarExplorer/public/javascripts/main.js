@@ -18,7 +18,7 @@ elfApp.controller('MainController', function ($scope, $http, renewableUtils) {
             });
     };
 
-})
+});
 /* $scope.getRenewable = function () {
     $http.get('data/Renewable.json')
         .then(function (res) {
@@ -37,15 +37,13 @@ elfApp.directive('elfRenewable', function () {
     };
 });
 
-
+/*
 elfApp.directive('elfSimpleFormat', function () {
     'use strict';
     return {
         controller: 'MainController',
         templateUrl: 'simple-format'
-
+*/
         /*template: 'Solar: {{simpleFormat[index].solar}}' +
          '<br>Geo: {{simpleFormat[index].geo}}' +
          '<br>Wind: {{simpleFormat[index].wind}}' */
-    };
-});

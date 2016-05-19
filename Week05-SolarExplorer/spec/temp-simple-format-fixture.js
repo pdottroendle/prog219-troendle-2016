@@ -1,4 +1,4 @@
-describe('Simple Format Fixture Suite', function() {
+/* describe('Simple Format Fixture Suite', function() {
 
     'use strict';
 
@@ -10,10 +10,6 @@ describe('Simple Format Fixture Suite', function() {
 
     beforeEach(module('elfApp'));
 
-    /*
-     * instantiate the controller without the directive
-     * Get the Angular compiler and templateCache for processing Angular templates
-     */
     beforeEach(inject(function(_$compile_, _$rootScope_, _$templateCache_, _$controller_) {
         scope = _$rootScope_.$new();
         $compile = _$compile_;
@@ -63,4 +59,4 @@ describe('Simple Format Fixture Suite', function() {
         expect(simpleFormatHtml.innerHTML).toContain('Wind: 3');
     });
 
-});
+}); */

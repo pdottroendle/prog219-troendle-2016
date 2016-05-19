@@ -49,7 +49,7 @@ describe('Simple Format HttpBackend Suite', function() {
         expect(true).toBe(true);
     });
 
-    fit('tests simple-format directive loaded through fixture with httpBackend', function() {
+    it('tests simple-format directive loaded through fixture with httpBackend', function() {
 
         var el = document.getElementById('simpleFormat');
 

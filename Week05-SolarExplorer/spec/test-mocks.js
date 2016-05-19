@@ -1,4 +1,4 @@
-describe('Elvenware Test Mocks Suite', function() {
+describe('Elvenware Test Mocks Suite', function () {
 
     'use strict';
 
@@ -9,7 +9,7 @@ describe('Elvenware Test Mocks Suite', function() {
     // Set up the module
     beforeEach(module('elfApp'));
 
-    beforeEach(inject(function(_$compile_, _$rootScope_, _$httpBackend_, _$controller_) {
+    beforeEach(inject(function (_$compile_, _$rootScope_, _$httpBackend_, _$controller_) {
         scope = _$rootScope_.$new();
         var $compile = _$compile_;
         $httpBackend = _$httpBackend_;
@@ -18,46 +18,44 @@ describe('Elvenware Test Mocks Suite', function() {
         });
     }));
 
-    afterEach(function() {
+    afterEach(function () {
         $httpBackend.verifyNoOutstandingExpectation();
         $httpBackend.verifyNoOutstandingRequest();
     });
 
-    it('proves we can run tests', function() {
-       expect(true).toBe(true);
+    it('proves we can run tests', function () {
+        expect(true).toBe(true);
     });
 
-    it('should find the index', function() {
-      expect(scope.index).toBe(0);
+    it('should find the index', function () {
+        expect(scope.index).toBe(0);
     });
-    
-    it('proves we can mock getting JSON data', function() {
 
-  var renewable = [{
-      "Year": "2017",
-      "Solar (quadrillion Btu)": "0.8045307",
-      "Geothermal (quadrillion Btu)": "0.2349284",
-      "Other biomass (quadrillion Btu)": "0.50916",
-      "Wind power (quadrillion Btu)": "2.202328",
-      "Liquid biofuels (quadrillion Btu)": "1.2329197",
-      "Wood biomass (quadrillion Btu)": "1.9860924",
-      "Hydropower (quadrillion Btu)": "2.5859957"
-  }];
+    it('proves we can mock getting JSON data', function () {
 
-  // Define what happens when $http.get() is called.
-  var requestHandler = $httpBackend
-      .when('GET', 'data/Renewable.json')
-      .respond(renewable);
+        var renewable = [{
+            "Year": "2017",
+            "Solar (quadrillion Btu)": "0.8045307",
+            "Geothermal (quadrillion Btu)": "0.2349284",
+            "Other biomass (quadrillion Btu)": "0.50916",
+            "Wind power (quadrillion Btu)": "2.202328",
+            "Liquid biofuels (quadrillion Btu)": "1.2329197",
+            "Wood biomass (quadrillion Btu)": "1.9860924",
+            "Hydropower (quadrillion Btu)": "2.5859957"
+        }];
 
-  $httpBackend.expectGET('data/Renewable.json');
-  scope.getRenewable();
-  $httpBackend.flush();
-  expect(scope.renewable[0].Year).toEqual('2017');
+        // Define what happens when $http.get() is called.
+        var requestHandler = $httpBackend
+            .when('GET', 'data/Renewable.json')
+            .respond(renewable);
 
-});
-    
-    
-    
+        $httpBackend.expectGET('data/Renewable.json');
+        scope.getRenewable();
+        $httpBackend.flush();
+        expect(scope.renewable[0].Year).toEqual('2017');
+
+    });
+
 
 });
 

@@ -15,6 +15,11 @@ Prog 219 in spring 2016 at Bellevue College
 
 note: the week 06 branch uses the Week05-SolarExplorer folder and the name was corrected to Week05-Angular_SolarExplorer
 
+## Week 07 Branch
+
+- [Angular Solar Simple Tests Assignment][solar-start-test2]
+[solar-start-test2]:http://www.ccalvert.net/books/CloudNotes/Assignments/AngularSolarSimpleFormat.html
+
      ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
     '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
     |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 

@@ -62,3 +62,55 @@ Simple Format Fixture Suite
 
 PhantomJS 2.1.1 (Linux 0.0.0): Executed 32 of 32 SUCCESS (0.108 secs / 0.258 secs)
 TOTAL: 32 SUCCESS
+
+
+
+apps.json
+======================
+/*global angular*/
+var myModule = angular.module("elfApp", ['ngRoute']);
+
+myModule.config(function($routeProvider, $locationProvider) {
+     'use strict';
+     
+    $routeProvider.when("/", {
+        templateUrl: "home",
+        controller: "MainController"
+    })
+    .when('renewables', {
+    templateUrl: 'renewables/renewables-page',
+    controller: 'MainController'
+    })
+      .when('/simple-format', {
+    templateUrl: 'renewables/simple-format-page',
+    controller: 'SimpleFormatController'
+    })
+    .when('/renewable-by-year', {
+    templateUrl: '/renewables/renewable-by-year-page',
+    controller: 'RenewableByYearController'
+    })
+    .when('/energy-types-energy-selector', {
+    templateUrl: 'simple-types-page',
+    controller: 'SimpleFormatController'
+    })
+    .when('/simple-format', {
+    templateUrl: 'simple-selector-page',
+    controller: 'SimpleFormatController'
+    })
+    .when('/simple-format', {
+    templateUrl: 'simple-format-page',
+    controller: 'SimpleFormatController'
+    })
+    .when('/about', {
+        templateUrl: "about",
+        controller: "AboutController"
+    }).otherwise({
+        redirectTo: '/'
+    });
+});
+
+$(document).ready(function(){
+    $(".navbar-navli.trigger-collapse a").click(function(event) {
+        $(".navbar-collapse").collapse('hide');
+    });
+});

@@ -1,4 +1,8 @@
-describe('Simple Format HttpBackend Suite', function() {
+/**
+ * Created by charlie on 5/10/16.
+ */
+
+describe('Simple Format HttpBack Suite', function() {
 
     'use strict';
 
@@ -24,7 +28,6 @@ describe('Simple Format HttpBackend Suite', function() {
         });
     }));
 
-// this is meant to be a key section !!!!!!!!!!!!!!!
     beforeEach(function() {
         scope.index = 5;
         var requestHandler = $httpBackend
@@ -58,13 +61,13 @@ describe('Simple Format HttpBackend Suite', function() {
         var element = $compile('<elf-simple-format></elf-simple-format>')(scope);
         scope.$digest();
 
-        console.log(JSON.stringify(scope.simpleFormat, null, 4));
+        //console.log(JSON.stringify(scope.simpleFormat, null, 4));
         // Check that the compiled element contains the templated content
         expect(element.text()).toContain('804');
         expect(element.text()).toContain('2.2');
     });
 
-    it('tests that we can index through simple-format directive to the fifth element', function() {
+    it('tests that we can index through simple-format directive', function() {
 
         var el = document.getElementById('simpleFormat');
         //console.log(el);

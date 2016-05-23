@@ -1,7 +1,7 @@
 /*global angular*/
 var elfApp = angular.module("elfApp");
 
-elfApp.controller('MainController', function($scope, $http, renewableUtils) {
+elfApp.controller('SimpleFormatController', function($scope, $http, renewableUtils) {
 
 $scope.mainData = "Main Data";
 $scope.index = 0;
@@ -18,11 +18,10 @@ $scope.getRenewable = function() {
 
 })
 
-elfApp.directive('elfRenewable', function() {
+elfApp.directive('elfSimpleFormat', function() {
     'use strict';
     return {
         controller: 'MainController',
-        templateUrl: 'renewable'
+        templateUrl: 'simple-format'
     };
 });
-

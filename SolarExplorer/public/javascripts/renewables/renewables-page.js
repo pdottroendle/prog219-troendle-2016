@@ -22,7 +22,7 @@ elfApp.directive('elfRenewable', function() {
     'use strict';
     return {
         controller: 'MainController',
-        templateUrl: 'renewable'
+        templateUrl: 'renewables/renewable'
     };
 });
 

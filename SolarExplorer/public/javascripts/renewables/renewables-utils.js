@@ -26,13 +26,16 @@ function RenewableUtils() {
     };
     
     this.getByYears = function(year) {
-        return renewables.map(function(renewable) {
+        for (var i = 0 , i<renewables.length , i++) 
+        {
+            if (year === renewables[i].Year)
+            {
+                return renewables[i];  //renewables.map(function(renewable)
+            }
 //            it should return an object with
 // An index property set to the index of the object with that year
 // The object at that index
-
-            return renewable.Year ;
-        });
+         });
     };
     
     this.getSimpleFormat = function() {

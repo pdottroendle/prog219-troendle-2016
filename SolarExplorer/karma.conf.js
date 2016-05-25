@@ -16,10 +16,10 @@ module.exports = function(config) {
         'public/components/angular-route/angular-route.js',
         'node_modules/jasmine-jquery/lib/*.js',  
         'public/javascripts/app.js',
-        'public/javascripts/*.js',
+        'public/javascripts/**/*.js',
         'spec/**/*.html',
         'spec/data/*.js',
-        'spec/test-*.js'
+        'spec/test*.js'
     ],
         
         // list of files to exclude

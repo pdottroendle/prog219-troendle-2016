@@ -16,7 +16,13 @@ $scope.getRenewable = function() {
         });
 };
 
-})
+//incomplete xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+$scope.getByYear= function(year)
+     var renewableData = $scope.renewableUtils.getByYear(year);
+       $scope.index = renewableData
+       $scope.renewable = renewableData.renewable; 
+return $scope.renewable;
+});
 
 elfApp.directive('elfRenewable', function() {
     'use strict';

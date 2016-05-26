@@ -30,12 +30,12 @@ function RenewableUtils() {
         {
             if (year === renewables[i].Year)
             {
-                return renewables[i];  //renewables.map(function(renewable)
+                return renewable: renewables[i];  //renewables.map(function(renewable)
             }
 
          }
     };
-    
+
     this.getSimpleFormat = function() {
         return renewables.map(function(renewable) {
         return  { geo : Number(renewable['Geothermal (quadrillion Btu)']) , 

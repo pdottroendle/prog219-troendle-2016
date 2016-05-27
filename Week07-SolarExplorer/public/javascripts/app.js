@@ -21,7 +21,9 @@ myModule.config(function($routeProvider, $locationProvider) {
     .when('/about', {
         templateUrl: "about",
         controller: "AboutController"
-    }).otherwise({
+    })
+    
+    .otherwise({
         redirectTo: '/'
     });
 });

@@ -25,4 +25,3 @@ elfApp.directive('elfRenewable', function() {
         templateUrl: 'renewable'
     };
 });
-

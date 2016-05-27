@@ -25,18 +25,20 @@ function RenewableUtils() {
         });
     };
     
+        this.getWood = function() {
+        return renewables.map(function(renewable) {
+            return { wood: renewable["Wood biomass (quadrillion Btu)"] };
+        });
+    };
+    
     this.getByYear = function(year) {
         for (var i = 0 ; i < renewables.length ; i++) {
-            if (year == renewables[i].Year)
+            if (String(year) === renewables[i].Year)
             {
                 return {
                     index: i,
                     renewable: renewables[i]
                 }
-            //return renewables.map(function(renewable) {
-                // return ' renewable: ' + {renewables[i]}  ;
-             //   });
- 
             }
         }
     };

@@ -61,7 +61,7 @@ describe('Simple Format HttpBack Suite', function() {
         var element = $compile('<elf-simple-format></elf-simple-format>')(scope);
         scope.$digest();
 
-        //console.log(JSON.stringify(scope.simpleFormat, null, 4));
+        console.log(JSON.stringify(scope.simpleFormat, null, 4));
         // Check that the compiled element contains the templated content
         expect(element.text()).toContain('804');
         expect(element.text()).toContain('2.2');
@@ -70,7 +70,7 @@ describe('Simple Format HttpBack Suite', function() {
     it('tests that we can index through simple-format directive', function() {
 
         var el = document.getElementById('simpleFormat');
-        //console.log(el);
+        console.log(el);
         $templateCache.put('simple-format', el);
         var element = $compile('<elf-simple-format></elf-simple-format>')(scope);
         scope.$digest();
@@ -78,7 +78,7 @@ describe('Simple Format HttpBack Suite', function() {
         scope.$digest();
         expect(element.text()).toContain('227');
         expect(element.text()).toContain('1.339');
-        //console.log(element);
+        console.log(element);
     });
 
 });

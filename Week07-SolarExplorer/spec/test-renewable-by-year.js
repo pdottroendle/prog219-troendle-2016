@@ -42,7 +42,7 @@ describe('Renewable By Year Suite', function () {
         expect(true).toBe(true);
     });
 
-    fit('proves renewables.getByYear returns index & expected object with string year', function() {
+    it('proves renewables.getByYear returns index & expected object with string year', function() {
         var renewableByYear = {
             "Year": "2015",
             "Solar (quadrillion Btu)": "0.532293912",
@@ -87,9 +87,9 @@ describe('Renewable By Year Suite', function () {
         var element = $compile('<elf-renewable-by-year></elf-renewable-by-year>')(scope);
         scope.$digest();
         var renewableByYear = scope.getByYear('2015');
-        //console.log(renewableByYear);
+        console.log(renewableByYear);
         scope.$digest();
-        //console.log(element.text());
+        console.log(element.text());
         expect(element.text()).toContain('1.8151574968');
     });
 

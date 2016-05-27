@@ -17,4 +17,12 @@ router.get('/:id', function(req, res, nest) {
     });
 });
 
+/*
+router.get('/renewables/:id', function(req, res, nest) {
+
+    'use strict';
+
+    res.render('renewables/' + req.params.id, {
+*/
+
 module.exports = router;

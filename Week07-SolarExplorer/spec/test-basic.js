@@ -68,9 +68,11 @@ describe('Elvenware Fixture and Template Cache Suite', function() {
         $templateCache.put('renewables/renewable', '<div id="renewable">First: {{renewable}}</div>');
 
         element = $compile('<elf-renewable></elf-renewable>')(scope);
-
+console.log("ghkkdjshjfgjkdf");        
+console.log(element);
         scope.$digest();
-
+console.log("vvvvvvvvvvvvvvvv");    
+console.log(element);
         expect(element.text()).toContain('First');
         expect(element.text()).toContain('2017');
     });

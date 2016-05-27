@@ -26,7 +26,11 @@ describe('Elvenware Test Mocks Suite', function() {
     it('proves we can run tests', function() {
        expect(true).toBe(true);
     });
-
+    
+    it('should have a getRenewable method ', function() {
+       expect(scope.getRenewable).toBeDefined();
+    });
+  
     it('should find the index', function() {
       expect(scope.index).toBe(0);
     });
@@ -57,6 +61,3 @@ describe('Elvenware Test Mocks Suite', function() {
     });
 });
 
-  it('should have a getRenewable method ', function() {
-    expect(scope.getRenewable).toBeDefined();
-  });

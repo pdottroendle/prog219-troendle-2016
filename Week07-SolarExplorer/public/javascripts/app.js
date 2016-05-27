@@ -9,7 +9,7 @@ myModule.config(function($routeProvider, $locationProvider) {
         controller: "MainController"
     })
     .when('/simple-format', {
-    templateUrl: 'simple-format',
+    templateUrl: 'simple-format-page',
     controller: 'SimpleFormatController'  
     })
     

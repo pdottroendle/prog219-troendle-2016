@@ -1,8 +1,4 @@
-/**
- * Created by charlie on 5/10/16.
- */
-
-describe('Simple Format HttpBack Suite', function() {
+describe('Simple Format HttpBackend Suite', function() {
 
     'use strict';
 
@@ -67,10 +63,10 @@ describe('Simple Format HttpBack Suite', function() {
         expect(element.text()).toContain('2.2');
     });
 
-    it('tests that we can index through simple-format directive', function() {
+    it('tests that we can index through simple-format directive to the fifth element', function() {
 
         var el = document.getElementById('simpleFormat');
-        console.log(el);
+        //console.log(el);
         $templateCache.put('simple-format', el);
         var element = $compile('<elf-simple-format></elf-simple-format>')(scope);
         scope.$digest();
@@ -78,7 +74,7 @@ describe('Simple Format HttpBack Suite', function() {
         scope.$digest();
         expect(element.text()).toContain('227');
         expect(element.text()).toContain('1.339');
-        console.log(element);
+        //console.log(element);
     });
 
 });

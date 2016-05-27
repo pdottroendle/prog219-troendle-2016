@@ -57,7 +57,7 @@ describe('Simple Format Fixture Suite', function() {
         var element = $compile('<elf-simple-format></elf-simple-format>')(scope);
         scope.$digest();
 
-        console.log(simpleFormatHtml.innerHTML);
+        console.log(simpleFormatHtml);
         expect(simpleFormatHtml.innerHTML).toContain('Solar: 2');
         expect(simpleFormatHtml.innerHTML).toContain('Geo: 1');
         expect(simpleFormatHtml.innerHTML).toContain('Wind: 3');

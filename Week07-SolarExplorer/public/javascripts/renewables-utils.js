@@ -51,6 +51,12 @@ function RenewableUtils() {
         });
     };
     
+    var simpleFormat = {
+  geo: 1,
+  solar: 2,
+  wind: 3
+}
+    
     this.getSimpleStringFormat = function() {
         return renewables.map(function(renewable) {
         return  { geo : String(renewable['Geothermal (quadrillion Btu)']) , 

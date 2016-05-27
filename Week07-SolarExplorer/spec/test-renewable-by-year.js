@@ -1,7 +1,3 @@
-/**
- * Created by charlie on 5/18/16.
- */
-
 describe('Renewable By Year Suite', function () {
 
     'use strict';
@@ -87,9 +83,9 @@ describe('Renewable By Year Suite', function () {
         var element = $compile('<elf-renewable-by-year></elf-renewable-by-year>')(scope);
         scope.$digest();
         var renewableByYear = scope.getByYear('2015');
-        console.log(renewableByYear);
+        //console.log(renewableByYear);
         scope.$digest();
-        console.log(element.text());
+        //console.log(element.text());
         expect(element.text()).toContain('1.8151574968');
     });
 

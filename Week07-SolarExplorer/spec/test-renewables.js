@@ -1,7 +1,3 @@
-/**
- * Created by charlie on 5/10/16.
- */
-
 describe('Renewables Suite', function() {
     'use strict';
 
@@ -21,8 +17,7 @@ describe('Renewables Suite', function() {
         });
     }));
 
-    beforeEach(function() {
-        //scope.renewableUtils.init(renewables);
+    beforeEach(function() {        
         var requestHandler = $httpBackend
             .when('GET', 'data/Renewable.json')
             .respond(renewables);
@@ -56,15 +51,7 @@ describe('Renewables Suite', function() {
 
     it('proves we can transform our json into a new array consisting only of years', function() {
         var years = scope.renewableUtils.getYears();
-    //    console.log(years);
         expect(years.length).toBe(12);
-    });
-
-    it('proves we can get our wood map', function() {
-        var woods = scope.renewableUtils.getWood();
-    //    console.log(woods);
-        expect(woods.length).toBe(12);
-        expect(woods[11]).toEqual({ wood: '2.099319235' });
     });
 
     it('proves our array of years contains the expected data', function() {
@@ -76,7 +63,6 @@ describe('Renewables Suite', function() {
 
     it('proves we can transform our json into an array with three properties: geo, solar, and wind', function() {
         var simpleFormat = scope.renewableUtils.getSimpleFormat();
-        //console.log(JSON.stringify(simpleFormat, null, 4));
         var keys = Object.keys(simpleFormat[0]);
         keys.sort();
         expect(keys).toEqual(['geo', 'solar', 'wind']);

@@ -16,12 +16,12 @@ $scope.getRenewable = function() {
         });
 };
 
-})
+});
 
 elfApp.directive('elfSimpleFormat', function() {
     'use strict';
     return {
-        controller: 'MainController',
-        templateUrl: 'simple-format'
+        controller: 'SimpleFormatController',
+        templateUrl: 'renewables/simple-format'
     };
 });

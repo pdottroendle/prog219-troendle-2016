@@ -5,27 +5,20 @@ myModule.config(function($routeProvider, $locationProvider) {
      'use strict';
      
     $routeProvider.when("/", {
-        templateUrl: "Home",
+        templateUrl: "home",
         controller: "HomeController"
     })
+    .when('/renewable-by-year', {
+    templateUrl: 'renewables/renewable-by-year-page',
+    controller: 'RenewableByYearController'
+    }) 
+    .when('/renewables', {
+    templateUrl: 'renewables/renewables-page',
+    controller: 'RenewablesController'
+    })
     .when('/simple-format', {
-    templateUrl: 'renewables/simple-format-page',
-    controller: 'SimpleFormatController'
-    })   // xxxxxxxxxxxxxxxxxxxxxxxxx fill in
-    
-        .when('/simple-format', {
-    templateUrl: 'renewables/simple-format-page',
-    controller: 'SimpleFormatController'
-    })
-    
-        .when('/simple-format', {
-    templateUrl: 'renewables/simple-format-page',
-    controller: 'SimpleFormatController'
-    })
-    
-        .when('/simple-format', {
-    templateUrl: 'renewables/simple-format-page',
-    controller: 'SimpleFormatController'
+        templateUrl: 'renewables/simple-format-page',
+        controller: 'SimpleFormatController'
     })
     .when('/about', {
         templateUrl: "about",

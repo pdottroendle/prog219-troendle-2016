@@ -5,13 +5,20 @@ block content
    .container
      navbar-header
        ul.nav.nav-pills
-         li(ng-class="{ active: isActive('/')}")
-           a(ng-href='#/') Home
-         li(ng-class="{ active: isActive('/simple-format')}")
+         li(ng-class="{ active: isActive('/home')}")
+           a(ng-href='#/home') Home
+           
+         li(ng-class="{ active: isActive('/renewables/renewables')}")
+           a(ng-href='#/renewables') Renewable  
+           
+         li(ng-class="{ active: isActive('/renewables/renewable-by-year')}")
+           a(ng-href='#/renewable-by-year') Renewable By Year
+           
+         li(ng-class="{ active: isActive('/renewables/simple-format')}")
            a(ng-href='#/simple-format') Simple Format
+           
          li(ng-class="{ active: isActive('/about')}")
            a(ng-href='#/about') About
-          // xxxxxxxxxxxxxxxxxxxxxxxxxx needs much more here
  .container
    h1= title
    p Welcome to #{title}

@@ -12,15 +12,31 @@ router.get('/', function(req, res, next) {
 
 router.get('renewables/:id', function(req, res, nest) {
     'use strict';
-    res.render('renewables/' + req.params.id, {
-        title: ' Angualr Directive  Troendle'
+    res.render('renewable' + req.params.id, {
+        title: ' Angular Directive  Troendle'
     });
 });
 
-router.get('/:id', function(req, res, nest) {
+/*   not a sub folder in fixtures ? renewables/renewables
+router.get('renewables-by-year/:id', function(req, res, nest) {
     'use strict';
-    res.render(req.params.id, {
-        title: ' Angualr Directive  Troendle'
+    res.render('renewables/renewables-by-year' + req.params.id, {
+        title: ' Angular Directive  Troendle'
+    });
+});
+
+router.get('simple-format/:id', function(req, res, nest) {
+    'use strict';
+    res.render('renewables/simple-format' + req.params.id, {
+        title: ' Angular Directive  Troendle'
+    });
+});
+*/
+
+router.get('/:id', function(request, response, next) {
+    'use strict';
+    response.render(request.params.id, {
+        title: ' Angular Directive Calvert'
     });
 });
 

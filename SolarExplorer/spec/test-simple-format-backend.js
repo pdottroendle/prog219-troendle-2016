@@ -2,13 +2,12 @@
  * Created by charlie on 5/10/16.
  */
 
-describe('Simple Format HttpBack Suite', function() {
+describe('Simple Format HttpBackend Suite', function() {
 
     'use strict';
 
     var scope;
     var $httpBackend;
-    var mainController;
     var $templateCache;
     var $compile;
 
@@ -23,13 +22,12 @@ describe('Simple Format HttpBack Suite', function() {
         $compile = _$compile_;
         $templateCache = _$templateCache_;
         $httpBackend = _$httpBackend_;
-        mainController = _$controller_('MainController', {
+        _$controller_('SimpleFormatController', {
             $scope: scope
         });
     }));
 
     beforeEach(function() {
-        scope.index = 5;
         var requestHandler = $httpBackend
             .when('GET', 'data/Renewable.json')
             .respond(renewables);
@@ -57,7 +55,7 @@ describe('Simple Format HttpBack Suite', function() {
 
         var el = document.getElementById('simpleFormat');
 
-        $templateCache.put('simple-format', el);
+        $templateCache.put('renewables/simple-format', el);
         var element = $compile('<elf-simple-format></elf-simple-format>')(scope);
         scope.$digest();
 
@@ -67,11 +65,11 @@ describe('Simple Format HttpBack Suite', function() {
         expect(element.text()).toContain('2.2');
     });
 
-    it('tests that we can index through simple-format directive', function() {
+    it('tests that we can index to the fifth element', function() {
 
         var el = document.getElementById('simpleFormat');
         //console.log(el);
-        $templateCache.put('simple-format', el);
+        $templateCache.put('renewables/simple-format', el);
         var element = $compile('<elf-simple-format></elf-simple-format>')(scope);
         scope.$digest();
         scope.index = 5;

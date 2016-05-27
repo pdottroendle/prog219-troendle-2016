@@ -5,7 +5,7 @@ function RenewableUtils() {
 
     var renewables;
 
-    this.name = 'renewableUtils';
+    this.name = 'renewableUtils';   // renewables/ ?
 
     this.init = function(initRenewables) {
         renewables = initRenewables;
@@ -25,17 +25,24 @@ function RenewableUtils() {
         });
     };
     
-    this.getByYears = function(year) {
-        for (var i = 0 ; i < renewables.length ; i++) 
-        {
-            if (year === renewables[i].Year)
-            {
-                return renewable: renewables[i];  //renewables.map(function(renewable)
-            }
-
-         }
+        this.getWood = function() {
+        return renewables.map(function(renewable) {
+            return { wood: renewable["Wood biomass (quadrillion Btu)"] };
+        });
     };
-
+    
+    this.getByYear = function(year) {
+        for (var i = 0 ; i < renewables.length ; i++) {
+            if (String(year) === renewables[i].Year)
+            {
+                return {
+                    index: i,
+                    renewable: renewables[i]
+                }
+            }
+        }
+    };
+    
     this.getSimpleFormat = function() {
         return renewables.map(function(renewable) {
         return  { geo : Number(renewable['Geothermal (quadrillion Btu)']) , 
@@ -54,4 +61,4 @@ function RenewableUtils() {
     
 }
 
-elfApp.service('renewableUtils', RenewableUtils);
+elfApp.service('renewableUtils', RenewableUtils);   // renewables/ ?

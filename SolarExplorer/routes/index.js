@@ -3,21 +3,22 @@ var router = express.Router();
 var fs = require('fs');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function(request, response, next) {
     'use strict';
-    res.render('index', {
+    response.render('index', {
         title: 'AngularSolarExplorer Troendle'
     });
 });
 
-router.get('renewables/:id', function(req, res, nest) {
+router.get('/renewables/:id', function(request, response, next) {
     'use strict';
-    res.render('renewable' + req.params.id, {
+    response.render('renewables/' + request.params.id, {
         title: ' Angular Directive  Troendle'
     });
 });
 
-/*   not a sub folder in fixtures ? renewables/renewables
+
+/*
 router.get('renewables-by-year/:id', function(req, res, nest) {
     'use strict';
     res.render('renewables/renewables-by-year' + req.params.id, {

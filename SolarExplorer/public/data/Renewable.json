@@ -89,14 +89,14 @@
         "Wood biomass (quadrillion Btu)": "1.931010018",
         "Hydropower (quadrillion Btu)": "2.66882412"
     },
-    {"Year": "2008",
-    "Solar (quadrillion Btu)": "0.088767018",
-    "Geothermal (quadrillion Btu)": "0.192433129",
-    "Other biomass (quadrillion Btu)": "0.435263359",
-    "Wind power (quadrillion Btu)": "0.54554798858",
-    "Liquid biofuels (quadrillion Btu)": "0.78437286524",
-    "Wood biomass (quadrillion Btu)": "2.058985068",
-    "Hydropower (quadrillion Btu)": "2.511108471"
+    {   "Year": "2008",
+        "Solar (quadrillion Btu)": "0.088767018",
+        "Geothermal (quadrillion Btu)": "0.192433129",
+        "Other biomass (quadrillion Btu)": "0.435263359",
+        "Wind power (quadrillion Btu)": "0.54554798858",
+        "Liquid biofuels (quadrillion Btu)": "0.78437286524",
+        "Wood biomass (quadrillion Btu)": "2.058985068",
+        "Hydropower (quadrillion Btu)": "2.511108471"
     },
     {
         "Year": "2007",

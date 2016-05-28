@@ -21,7 +21,7 @@ $scope.getRenewable = function() {
 elfApp.directive('elfSimpleFormat', function() {
     'use strict';
     return {
-        controller:  'RenewablesController', //'SimpleFormatController',
+        controller:  'SimpleFormatController',
         templateUrl: 'renewables/simple-format'
     };
 });

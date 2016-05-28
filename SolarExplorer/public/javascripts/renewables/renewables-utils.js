@@ -61,4 +61,4 @@ function RenewableUtils() {
     
 }
 
-elfApp.service('renewableUtils', RenewableUtils);   // renewables/ ?
+elfApp.service('renewableUtils', RenewableUtils);

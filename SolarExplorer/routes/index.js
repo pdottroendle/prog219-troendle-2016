@@ -17,7 +17,7 @@ router.get('/renewables/:id', function(request, response, next) {
     });
 });
 
-
+/*
 router.get('/renewablesByYear/:id', function (request, response) {
     'use strict';
     console.log('Renewables By Year called', request.params.id);
@@ -49,7 +49,6 @@ router.get('/renewablesByYear/:id', function (request, response) {
 
 });
 
-/*
 
 router.get('renewables-by-year/:id', function(req, res, nest) {
     'use strict';

@@ -19,7 +19,7 @@ describe('Renewable By Year Suite', function() {
         $templateCache = _$templateCache_;
         $httpBackend = _$httpBackend_;
         _$controller_('RenewableByYearController', {
-        $scope: scope
+            $scope: scope
         });
     }));
 

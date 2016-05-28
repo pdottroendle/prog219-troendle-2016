@@ -7,34 +7,33 @@ function RenewableUtils() {
 
     this.name = 'renewableUtils';   // renewables/ ?
 
-    this.init = function(initRenewables) {
+    this.init = function (initRenewables) {
         renewables = initRenewables;
     };
 
-    this.getItemCount = function() {
-          return renewables.length;
+    this.getItemCount = function () {
+        return renewables.length;
     };
 
-    this.getByIndex = function(index) {
+    this.getByIndex = function (index) {
         return renewables[index];
     };
 
-    this.getYears = function() {
-        return renewables.map(function(renewable) {
-            return renewable.Year ;
+    this.getYears = function () {
+        return renewables.map(function (renewable) {
+            return renewable.Year;
         });
     };
-    
-        this.getWood = function() {
-        return renewables.map(function(renewable) {
-            return { wood: renewable["Wood biomass (quadrillion Btu)"] };
+
+    this.getWood = function () {
+        return renewables.map(function (renewable) {
+            return {wood: renewable["Wood biomass (quadrillion Btu)"]};
         });
     };
-    
-    this.getByYear = function(year) {
-        for (var i = 0 ; i < renewables.length ; i++) {
-            if (String(year) === renewables[i].Year)
-            {
+
+    this.getByYear = function (year) {
+        for (var i = 0; i < renewables.length; i++) {
+            if (String(year) === renewables[i].Year) {
                 return {
                     index: i,
                     renewable: renewables[i]
@@ -42,23 +41,27 @@ function RenewableUtils() {
             }
         }
     };
-    
-    this.getSimpleFormat = function() {
-        return renewables.map(function(renewable) {
-        return  { geo : Number(renewable['Geothermal (quadrillion Btu)']) , 
-                  wind : Number(renewable['Wind power (quadrillion Btu)']) ,
-                  solar : Number(renewable['Solar (quadrillion Btu)']) } ;
+
+    this.getSimpleFormat = function () {
+        return renewables.map(function (renewable) {
+            return {
+                geo: Number(renewable['Geothermal (quadrillion Btu)']),
+                wind: Number(renewable['Wind power (quadrillion Btu)']),
+                solar: Number(renewable['Solar (quadrillion Btu)'])
+            };
         });
     };
-    
-    this.getSimpleStringFormat = function() {
-        return renewables.map(function(renewable) {
-        return  { geo : String(renewable['Geothermal (quadrillion Btu)']) , 
-                  wind : String(renewable['Wind power (quadrillion Btu)']) ,
-                  solar : String(renewable['Solar (quadrillion Btu)']) };
+
+    this.getSimpleStringFormat = function () {
+        return renewables.map(function (renewable) {
+            return {
+                geo: String(renewable['Geothermal (quadrillion Btu)']),
+                wind: String(renewable['Wind power (quadrillion Btu)']),
+                solar: String(renewable['Solar (quadrillion Btu)'])
+            };
         });
     };
-    
+
 }
 
 elfApp.service('renewableUtils', RenewableUtils);

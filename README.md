@@ -20,6 +20,14 @@ note: the week 06 branch uses the Week05-SolarExplorer folder and the name was c
 - [Angular Solar Simple Tests Assignment][solar-start-test2]
 [solar-start-test2]:http://www.ccalvert.net/books/CloudNotes/Assignments/AngularSolarSimpleFormat.html
 
+  
+## Week 08 Branch
+
+- [Angular Solar Refactor Assignment][solar-start-test3]
+[solar-start-test3]:http://www.ccalvert.net/books/CloudNotes/Assignments/AngularSolarRefactor.html
+- [Angular SolarMidterm Assignment][solar-start-test4]
+[solar-start-test4]:http://www.ccalvert.net/books/CloudNotes/Assignments/Prog219Midterm2016.html
+
      ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
     '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
     |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 

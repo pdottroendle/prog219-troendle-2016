@@ -1,64 +1,54 @@
-# Week04-AngularDirectiveTesting
-by Charlie Calvert
-student: Peter-Paul Troendle
+# Prog219 Troendle
+
+Prog 219 in spring 2016 at Bellevue College
+
+## Week 05 Branch
+
+- [Angular Solar Starter Assignment][solar-start]
+
+[solar-start]:http://www.ccalvert.net/books/CloudNotes/Assignments/AngularSolarStarter.html
+
+## Week 06 Branch
+
+- [Angular Solar Starter Tests Assignment][solar-start-test]
+[solar-start-test]:http://www.ccalvert.net/books/CloudNotes/Assignments/AngularSolarStarterTests.html
+
+note: the week 06 branch uses the Week05-SolarExplorer folder and the name was corrected to Week05-Angular_SolarExplorer
+
+## Week 07 Branch
+
+- [Angular Solar Simple Tests Assignment][solar-start-test2]
+[solar-start-test2]:http://www.ccalvert.net/books/CloudNotes/Assignments/AngularSolarSimpleFormat.html
+
+  
+## Week 08 Branch
+
+- [Angular Solar Refactor Assignment][solar-start-test3]
+[solar-start-test3]:http://www.ccalvert.net/books/CloudNotes/Assignments/AngularSolarRefactor.html
+- [Angular SolarMidterm Assignment][solar-start-test4]
+[solar-start-test4]:http://www.ccalvert.net/books/CloudNotes/Assignments/Prog219Midterm2016.html
+
+     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
+    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
+    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
+    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
+     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
+    ----------------------------------------------------------------- 
 
 
-Karma problems:
-npm install & bower insatll
-npm install -g karma
-npm install karma-jasmine --save-dev
-npm install karma-spec-reporter --save-dev
-npm install karma-phantomjs-launcher --save-dev
-npm install karma-spec-reporter --save-dev
-npm install -g phantomjs-prebuilt
-karma start
- bower install bootstrap angular angular-mocks --save
- 
- 
- 
- Elvenware Fixture and Template Cache Suite
-  ✓ expects true to be true
-  ✓ should find the index
-  ✓ should have a getRenewable method
-  ✓ should be possible to access the fixture
-  ✓ tests template loaded through simple raw text
-  ✓ tests template loaded through more complex raw text
-  ✓ tests scope variable access in template loaded through fixture
+Welcome to your Node.js project on Cloud9 IDE!
 
-Elvenware Simple Mocks with HttpBackend Suite
-  ✓ proves we can run tests
-  ✓ should find the index
-  ✓ should have a getRenewable method
-  ✓ proves we can detect request
+This chat example showcases how to use `socket.io` with a static `express` server.
 
-Renewables Suite
-  ✓ proves we can run tests
-  ✓ proves we can get renewableUtils name
-  ✓ proves we can get renewableUtils method called getItemCount
-  ✓ proves we can get from renewableUtils a particular renewable object by index
-  ✓ proves we can transform our json into a new array consisting only of years
-  ✓ proves we can get our wood map
-  ✓ proves our array of years contains the expected data
-  ✓ proves we can transform our json into an array with three properties: geo, solar, and wind
-  ✓ proves that getSimpleStringFormat returns the expected string data
-  ✓ proves that getSimpleFormat returns the expected numeric data
+## Running the server
 
-Simple Format HttpBackend Suite
-  ✓ expects true to be true
-  ✓ tests simple-format directive loaded through fixture with httpBackend
-  ✓ tests that we can index to the fifth element
+1) Open `server.js` and start the app by clicking on the "Run" button in the top menu.
 
-Simple Format Exercises Suite
-  ✓ expects true to be true
-  ✓ proves renewables.getByYear returns index & expected object
-  ✓ tests that we can get an item in simpleFormat by Year
-  ✓ tests that we can get an item in simpleFormat by Year
+2) Alternatively you can launch the app from the Terminal:
 
-Simple Format Fixture Suite
-  ✓ expects true to be true
-  ✓ should find the index
-  ✓ should be possible to access the fixture
-  ✓ should be possible to access the fixture and put real data in it.
+    $ node server.js
 
-PhantomJS 2.1.1 (Linux 0.0.0): Executed 32 of 32 SUCCESS (0.108 secs / 0.258 secs)
-TOTAL: 32 SUCCESS
+Once the server is running, open the project in the shape of 'https://projectname-username.c9.io/'. As you enter your name, watch the Users list (on the left) update. Once you press Enter or Send, the message is shared with all connected clients.
+
+Calvert is my instructor
+

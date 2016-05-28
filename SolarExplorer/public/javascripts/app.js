@@ -13,7 +13,7 @@ myModule.config(function($routeProvider, $locationProvider) {
     controller: 'RenewableByYearController'
     }) 
     .when('/renewables', {
-    templateUrl: 'renewables/renewables-page',
+    templateUrl: 'renewables/renewable-page',
     controller: 'RenewablesController'
     })
     .when('/simple-format', {

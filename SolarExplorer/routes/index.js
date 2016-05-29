@@ -6,14 +6,21 @@ var fs = require('fs');
 router.get('/', function(request, response, next) {
     'use strict';
     response.render('index', {
-        title: 'AngularSolarExplorer Troendle'
+        title: 'Angular Solar Explorer Troendle'
     });
 });
 
 router.get('/renewables/:id', function(request, response, next) {
     'use strict';
     response.render('renewables/' + request.params.id, {
-        title: ' Angular Directive  Troendle'
+        title: 'Angular Solar Explorer Troendle'
+    });
+});
+
+router.get('/energy-types/:id', function(request, response, next) {
+    'use strict';
+    response.render('energy-types/' + request.params.id, {
+        title: 'Angular Solar Explorer Troendle'
     });
 });
 
@@ -36,7 +43,7 @@ router.get('/renewables/:id', function(request, response, next) {
 router.get('/:id', function(request, response, next) {
     'use strict';
     response.render(request.params.id, {
-        title: ' Angular Directive Calvert'
+        title: 'Angular Solar Explorer Troendle'
     });
 });
 

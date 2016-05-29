@@ -20,20 +20,19 @@ myModule.config(function($routeProvider, $locationProvider) {
             templateUrl: 'renewables/simple-format-page',
             controller: 'SimpleFormatController'
         })
+        .when('/energy-types', {
+        templateUrl: 'energy-types/energy-types-page',
+        controller: 'EnergyTypesController'
+        })
+        .when('/energy-selector', {
+        templateUrl: 'energy-types/energy-selector-page',
+        controller: 'EnergySelectorController'
+        })
         .when('/about', {
             templateUrl: 'about',
             controller: 'AboutController'
-        }).otherwise({
+        })
+        .otherwise({
             redirectTo: '/'
         });
 });
-/*
-.when('/ccccccccccccccccccccccc', {
-    templateUrl: 'high-tech-energy/simple-format-page',
-    controller: 'SimpleFormatController'
-})
-.when('/renewables', {
-    templateUrl: 'high-tech-energy/msn-types',  // ccccccccccccccccccccccccc
-    controller: 'RenewablesController'
-})
-*/

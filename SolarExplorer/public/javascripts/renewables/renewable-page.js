@@ -8,12 +8,16 @@ elfApp.controller('RenewablesController', function($scope, $http, renewableUtils
     $scope.index = 0;
 
     $scope.getRenewable = function() {
-        $http.get('data/Renewable.json')
+        $http.get('data/Renewable.json') //$http.get('data/EnergyTypes.json')
             .then(function(res) {
                 renewableUtils.init(res.data);
                 $scope.renewable = res.data;
                 $scope.renewableUtils = renewableUtils;
                 $scope.simpleFormat = renewableUtils.getSimpleFormat();
+            }, function errorCallback(response) {
+                // called asynchronously if an error occurs
+                // or server returns response with an error status.
+                console.log('Error:', response.status, response.statusText);
             });
     };
 });

@@ -19,6 +19,10 @@ elfApp.controller('RenewableByYearController', function($scope, $http, renewable
                 $scope.renewable = res.data;
                 $scope.renewableUtils = renewableUtils;
                 $scope.getByYear($scope.userYearInput);
+            }, function errorCallback(response) {
+                // called asynchronously if an error occurs
+                // or server returns response with an error status.
+                console.log('Error:', response.status, response.statusText);
             });
     };
 

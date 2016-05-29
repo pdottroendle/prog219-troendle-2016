@@ -27,3 +27,13 @@ myModule.config(function($routeProvider, $locationProvider) {
             redirectTo: '/'
         });
 });
+/*
+.when('/ccccccccccccccccccccccc', {
+    templateUrl: 'high-tech-energy/simple-format-page',
+    controller: 'SimpleFormatController'
+})
+.when('/renewables', {
+    templateUrl: 'high-tech-energy/msn-types',  // ccccccccccccccccccccccccc
+    controller: 'RenewablesController'
+})
+*/

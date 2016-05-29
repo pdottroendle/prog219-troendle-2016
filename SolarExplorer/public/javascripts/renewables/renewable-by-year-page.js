@@ -1,11 +1,12 @@
 /*global angular*/
-var elfApp = angular.module("elfApp");
+var elfApp = angular.module('elfApp');
 
 elfApp.controller('RenewableByYearController', function($scope, $http, renewableUtils) {
+    'use strict';
 
-    $scope.mainData = "Renewable Data";
+    $scope.mainData = 'Renewable Data';
 
-    $scope.userYearInput = 2006; //"Simple Format Data";
+    $scope.userYearInput = 2006;
     //$scope.index = 0;
 
     $scope.getRenewableByYear = function() {

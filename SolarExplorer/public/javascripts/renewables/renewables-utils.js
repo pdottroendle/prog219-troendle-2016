@@ -5,7 +5,7 @@ function RenewableUtils() {
 
     var renewables;
 
-    this.name = 'renewableUtils'; // renewables/ ?
+    this.name = 'renewableUtils';
 
     this.init = function(initRenewables) {
         renewables = initRenewables;
@@ -28,7 +28,7 @@ function RenewableUtils() {
     this.getWood = function() {
         return renewables.map(function(renewable) {
             return {
-                wood: renewable["Wood biomass (quadrillion Btu)"]
+                wood: renewable['Wood biomass (quadrillion Btu)']
             };
         });
     };
@@ -39,7 +39,7 @@ function RenewableUtils() {
                 return {
                     index: i,
                     renewable: renewables[i]
-                }
+                };
             }
         }
     };

@@ -6,8 +6,11 @@ elfApp.controller('RenewableByYearController', function($scope, $http, renewable
 
     $scope.mainData = 'Renewable Data';
 
-    $scope.userYearInput = 2006;
-    //$scope.index = 0;
+    $scope.userYearInput = 2017;
+
+    $scope.yearChange = function() {
+        $scope.getByYear($scope.userYearInput);
+    };
 
     $scope.getRenewableByYear = function() {
         $http.get('data/Renewable.json')

@@ -1,26 +1,26 @@
 extends layout
 
 block content
- nav.navbar-inverse.navbar-fixed-top
-   .container
-     navbar-header
-       ul.nav.nav-pills
-         li(ng-class="{ active: isActive('/home')}")
-           a(ng-href='#/home') Home
-           
-         li(ng-class="{ active: isActive('/renewables/renewables')}")
-           a(ng-href='#/renewables') Renewable  
-           
-         li(ng-class="{ active: isActive('/renewables/renewable-by-year')}")
-           a(ng-href='#/renewable-by-year') Renewable By Year
-           
-         li(ng-class="{ active: isActive('/renewables/simple-format')}")
-           a(ng-href='#/simple-format') Simple Format
-           
-         li(ng-class="{ active: isActive('/about')}")
-           a(ng-href='#/about') About
- .container
-   h1= title
-   p Welcome to #{title}
+    nav.navbar-inverse.navbar-fixed-top
+        .container
+            navbar-header
+                ul.nav.nav-pills
+                    li(ng-class="{ active: isActive('/home')}")
+                        a(ng-href='#/home') Home
 
-   div(data-ng-view="")
+                    li(ng-class="{ active: isActive('/renewables/renewables')}")
+                        a(ng-href='#/renewables') Renewable
+
+                    li(ng-class="{ active: isActive('/renewables/renewable-by-year')}")
+                        a(ng-href='#/renewable-by-year') Renewable By Year
+
+                    li(ng-class="{ active: isActive('/renewables/simple-format')}")
+                        a(ng-href='#/simple-format') Simple Format
+
+                    li(ng-class="{ active: isActive('/about')}")
+                        a(ng-href='#/about') About
+    .container
+        h1= title
+        p Welcome to #{title}
+
+        div(data-ng-view="")

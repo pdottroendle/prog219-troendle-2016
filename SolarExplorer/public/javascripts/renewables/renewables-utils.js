@@ -5,33 +5,35 @@ function RenewableUtils() {
 
     var renewables;
 
-    this.name = 'renewableUtils';   // renewables/ ?
+    this.name = 'renewableUtils'; // renewables/ ?
 
-    this.init = function (initRenewables) {
+    this.init = function(initRenewables) {
         renewables = initRenewables;
     };
 
-    this.getItemCount = function () {
+    this.getItemCount = function() {
         return renewables.length;
     };
 
-    this.getByIndex = function (index) {
+    this.getByIndex = function(index) {
         return renewables[index];
     };
 
-    this.getYears = function () {
-        return renewables.map(function (renewable) {
+    this.getYears = function() {
+        return renewables.map(function(renewable) {
             return renewable.Year;
         });
     };
 
-    this.getWood = function () {
-        return renewables.map(function (renewable) {
-            return {wood: renewable["Wood biomass (quadrillion Btu)"]};
+    this.getWood = function() {
+        return renewables.map(function(renewable) {
+            return {
+                wood: renewable["Wood biomass (quadrillion Btu)"]
+            };
         });
     };
 
-    this.getByYear = function (year) {
+    this.getByYear = function(year) {
         for (var i = 0; i < renewables.length; i++) {
             if (String(year) === renewables[i].Year) {
                 return {
@@ -42,8 +44,8 @@ function RenewableUtils() {
         }
     };
 
-    this.getSimpleFormat = function () {
-        return renewables.map(function (renewable) {
+    this.getSimpleFormat = function() {
+        return renewables.map(function(renewable) {
             return {
                 geo: Number(renewable['Geothermal (quadrillion Btu)']),
                 wind: Number(renewable['Wind power (quadrillion Btu)']),
@@ -52,8 +54,8 @@ function RenewableUtils() {
         });
     };
 
-    this.getSimpleStringFormat = function () {
-        return renewables.map(function (renewable) {
+    this.getSimpleStringFormat = function() {
+        return renewables.map(function(renewable) {
             return {
                 geo: String(renewable['Geothermal (quadrillion Btu)']),
                 wind: String(renewable['Wind power (quadrillion Btu)']),

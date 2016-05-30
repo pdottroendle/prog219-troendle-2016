@@ -1,19 +1,25 @@
 /*global angular*/
 var elfApp = angular.module('elfApp');
 
-elfApp.controller('EnergyTypesController', function($scope, $http, energyTypesUtils) {
+elfApp.controller('EnergyTypesController', function($scope, $http) { // , energyTypesUtils) {
     'use strict';
 
-    $scope.mainData = 'Renewable Data';
+    $scope.mainData = 'EnergyTypes Data';
     $scope.index = 0;
 
     $scope.getEnergyTypes = function() {
         $http.get('data/EnergyTypes.json')
             .then(function(res) {
-                energyTypesUtils.init(res.data);
+               // $scope=JSON.parse(res.data);
+               console.log(res.data);    
+               console.log("xxxxxxxxxxxxxx");
                 $scope.energy = res.data;
-                $scope.energyTypesUtils = energyTypesUtils;
-                $scope.simpleFormat = energyTypesUtils.getSimpleFormat();
+               //console.log(JSON.parse(data));
+               //console.log(JSON.parse(res.data));
+                //energyTypesUtils.init(res.data);
+                console.log($scope.energy)
+                //$scope.energyTypesUtils = energyTypesUtils;
+                //$scope.simpleFormat = energyTypesUtils.getSimpleFormat();
             }, function errorCallback(response) {
                 // called asynchronously if an error occurs
                 // or server returns response with an error status.

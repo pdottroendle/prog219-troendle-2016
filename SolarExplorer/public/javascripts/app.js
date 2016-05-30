@@ -21,12 +21,12 @@ myModule.config(function($routeProvider, $locationProvider) {
             controller: 'SimpleFormatController'
         })
         .when('/energy-types', {
-        templateUrl: 'energy-types/energy-types-page',
-        controller: 'EnergyTypesController'
+            templateUrl: 'energy-types/energy-types-page',
+            controller: 'EnergyTypesController'
         })
         .when('/energy-selector', {
-        templateUrl: 'energy-types/energy-selector-page',
-        controller: 'EnergySelectorController'
+            templateUrl: 'energy-types/energy-selector-page',
+            controller: 'EnergySelectorController'
         })
         .when('/about', {
             templateUrl: 'about',
@@ -35,4 +35,11 @@ myModule.config(function($routeProvider, $locationProvider) {
         .otherwise({
             redirectTo: '/'
         });
+});
+
+$(document).ready(function() {
+    'use strict';
+    $('.navbar-nav li.trigger-collapse a').click(function(event) {
+        $('.navbar-collapse').collapse('hide');
+    });
 });

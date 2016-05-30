@@ -1,11 +1,11 @@
 var elfApp = angular.module('elfApp');
 
-function RenewableUtils() {
+function EnergyTypesUtils() {
     'use strict';
 
     var renewables;
 
-    this.name = 'renewableUtils'; // renewables/ ?
+    this.name = 'energyTypesUtils'; // renewables/ ?
 
     this.init = function(initRenewables) {
         renewables = initRenewables;
@@ -19,6 +19,7 @@ function RenewableUtils() {
         return renewables[index];
     };
 
+/*
     this.getYears = function() {
         return renewables.map(function(renewable) {
             return renewable.Year;
@@ -63,7 +64,8 @@ function RenewableUtils() {
             };
         });
     };
+*/
 
 }
 
-elfApp.service('renewableUtils', RenewableUtils);
+elfApp.service('energyTypesUtils', energyTypesUtils);

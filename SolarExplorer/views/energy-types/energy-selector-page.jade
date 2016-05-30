@@ -1,0 +1,5 @@
+.panel.panel-default
+    .panel-heading Select MSN Type
+    .panel-body
+        div(data-ng-repeat="msnType in msnTypes track by msnType.description")
+            a(id="{{msnType.msn}}", href="", ng-click='selectMsnType()') {{msnType.msn}}: {{msnType.description}}

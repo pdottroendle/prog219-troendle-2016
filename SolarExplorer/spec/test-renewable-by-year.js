@@ -43,7 +43,7 @@ describe('Renewable By Year Suite', function() {
     });
 
     it('proves RenewablesByYear.userYearInput exists', function() {
-        expect(scope.userYearInput).toBeDefined();
+       expect(scope.userYearInput).toBeDefined();
     });
 
     it('proves RenewablesByYear.userYearInput was initialized to a number', function() {
@@ -111,4 +111,5 @@ describe('Renewable By Year Suite', function() {
         //console.log(element.text());
         expect(element.text()).toContain('1.8151574968');
     });
+
 });

@@ -1,4 +1,4 @@
-/*global angular*/
+/*global energyType angular*/
 var elfApp = angular.module('elfApp');
 
 elfApp.controller('EnergyTypesController', function($scope, $http, msnTypes) {

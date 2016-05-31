@@ -1,28 +1,34 @@
 /*global angular*/
 var elfApp = angular.module('elfApp');
 
-elfApp.controller('EnergyTypesController', function($scope, $http) { // , energyTypesUtils) {
+elfApp.controller('EnergyTypesController', function($scope, $http, msnTypes) {
     'use strict';
 
     $scope.mainData = 'EnergyTypes Data';
     $scope.index = 0;
-    
+
     $scope.energyChange = function() {
         $scope.getEnergyTypes($scope.index);
     };
-    
+    $scope.selectMsnType = function() {
+        $scope.selectedMsnType = this.msnType.description;
+        $scope.filteredEnergyTypes = $scope.energyTypes.filter(function(energy) {
+            return energyType.Description === $scope.selectedMsnType;
+        });
+        $scope.filteredRecordCount = $scope.filteredEnergyTypes.length;
+    };
     $scope.getEnergyTypes = function() {
         $http.get('data/EnergyTypes.json')
             .then(function(res) {
-               // $scope=JSON.parse(res.data);
-               console.log(res.data);    
-               console.log("xxxxxxxxxxxxxx");
+                // $scope=JSON.parse(res.data);
+                console.log(res.data);
+                console.log('xxxxxxxxxxxxxx');
                 $scope.energy = res.data;
                 $scope.lengths = res.data.length;
-               //console.log(JSON.parse(data));
-               //console.log(JSON.parse(res.data));
+                //console.log(JSON.parse(data));
+                //console.log(JSON.parse(res.data));
                 //energyTypesUtils.init(res.data);
-                console.log($scope.energy)
+                console.log($scope.energy);
                 //$scope.energyTypesUtils = energyTypesUtils;
                 //$scope.simpleFormat = energyTypesUtils.getSimpleFormat();
             }, function errorCallback(response) {

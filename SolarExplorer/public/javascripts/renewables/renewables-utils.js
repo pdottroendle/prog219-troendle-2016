@@ -5,7 +5,7 @@ function RenewableUtils() {
 
     var renewables;
 
-    this.name = 'renewableUtils'; // renewables/ ?
+    this.name = 'renewableUtils';
 
     this.init = function(initRenewables) {
         renewables = initRenewables;

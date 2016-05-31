@@ -21,32 +21,14 @@ elfApp.controller('EnergyTypesController', function($scope, $http, msnTypes) {
     };
 
     $scope.getEnergyTypes = function () {
-            $http.get('data/EnergyTypes.json')
+            $http.get('data/EnergyTypes.json') 
                 .then(function (response) {                
                     $scope.msnTypes = msnTypes(response.data);
-                    $scope.msnTypesmsn1 = $scope.msnTypes[1]['msn'];
-                    $scope.msnTypesdescription1 =$scope.msnTypes[1]['description'];
-                    $scope.msnTypesmsn2 = $scope.msnTypes[2]['msn'];
-                    $scope.msnTypesdescription2 =$scope.msnTypes[2]['description'];
-                    $scope.msnTypesmsn3 = $scope.msnTypes[3]['msn'];
-                    $scope.msnTypesdescription3 =$scope.msnTypes[3]['description'];
-                    $scope.msnTypesmsn4 = $scope.msnTypes[4]['msn'];
-                    $scope.msnTypesdescription4 =$scope.msnTypes[4]['description'];
- 
-                    $scope.msnTypesmsn5 = $scope.msnTypes[5]['msn'];
-                    $scope.msnTypesdescription5 =$scope.msnTypes[5]['description'];
-                    $scope.msnTypesmsn6 = $scope.msnTypes[6]['msn'];
-                    $scope.msnTypesdescription6 =$scope.msnTypes[6]['description'];
-                    $scope.msnTypesmsn7 = $scope.msnTypes[7]['msn'];
-                    $scope.msnTypesdescription7 =$scope.msnTypes[7]['description'];
-                    $scope.msnTypesmsn8 = $scope.msnTypes[8]['msn'];                    
-                    $scope.msnTypesdescription8 =$scope.msnTypes[8]['description'];
-                    $scope.msnTypesmsn9 = $scope.msnTypes[9]['msn'];
-                    $scope.msnTypesdescription9 =$scope.msnTypes[9]['description'];
-                    $scope.msnTypesmsn10 = $scope.msnTypes[10]['msn'];
-                    $scope.msnTypesdescription10 =$scope.msnTypes[10]['description'];
-                    $scope.msnTypesmsn11 = $scope.msnTypes[11]['msn'];
-                    $scope.msnTypesdescription11 =$scope.msnTypes[11]['description'];
+                    var msn = [];
+                    for (var i = 0; i < $scope.msnTypes.length ; i++) {
+                    msn.push($scope.msnTypes[i]['msn'] + ':    ' + $scope.msnTypes[i]['description'] ); 
+                    }; 
+                    $scope.x = msn; 
   
                     $scope.energyTypes = response.data;
                   }, function errorCallback(response) {

@@ -9,7 +9,7 @@ elfApp.controller('EnergySelectorController', function($scope, $http, msnTypes) 
     
     $scope.selectMsnType = function() {
         $scope.selectedMsnType = this.msnType.description;
-        $scope.filteredEnergyTypes = $scope.energyTypes.filter(function(energyType) {
+        $scope.filteredEnergyTypes = $scope.energyTypes.filter(function(energy) {
             return energyType.Description === $scope.selectedMsnType;
         });
         $scope.filteredRecordCount = $scope.filteredEnergyTypes.length;
@@ -18,10 +18,8 @@ elfApp.controller('EnergySelectorController', function($scope, $http, msnTypes) 
     $scope.getEnergySelector = function() {
         $http.get('data/EnergyTypes.json')
             .then(function(res) {
-                energyTypesUtils.init(res.data);
                 $scope.energy = res.data;
-                $scope.energyTypesUtils = energyTypesUtils;
-                $scope.simpleFormat = energyTypesUtils.getSimpleFormat();
+                $scope.lengths = res.data.length;
             }, function errorCallback(response) {
                 // called asynchronously if an error occurs
                 // or server returns response with an error status.

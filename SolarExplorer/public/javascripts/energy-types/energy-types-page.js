@@ -9,6 +9,7 @@ elfApp.controller('EnergyTypesController', function($scope, $http, msnTypes) {
 
     $scope.energyChange = function() {
         $scope.getEnergyTypes($scope.index);
+        $scope.selectMsnType($scope.filteredEnergyTypes);
     };
     $scope.selectMsnType = function() {
         $scope.selectedMsnType = this.msnType.description;

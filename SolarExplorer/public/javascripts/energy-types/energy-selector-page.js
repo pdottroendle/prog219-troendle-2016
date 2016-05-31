@@ -17,16 +17,17 @@ elfApp.controller('EnergySelectorController', function($scope, $http, msnTypes) 
     
     $scope.getEnergySelector = function() {
         $http.get('data/EnergyTypes.json')
-            .then(function(res) {
-                $scope.energy = res.data;
-                $scope.lengths = res.data.length;
-            }, function errorCallback(response) {
-                // called asynchronously if an error occurs
-                // or server returns response with an error status.
-                console.log('Error:', response.status, response.statusText);
-            });
-    };
-});
+                .then(function (response) {                
+                    $scope.msnTypes = msnTypes(response.data);
+                    console.log(response.data);
+                    console.log('xxxxxxxxxxxxxx');
+                    //$scope.energyTypes = res.data;
+                  }, function errorCallback(response) {
+                    console.log('Error:', response.status, response.statusText);
+                  }
+                );
+        };
+    });
 
 elfApp.directive('elfEnergySelector', function() {
     'use strict';

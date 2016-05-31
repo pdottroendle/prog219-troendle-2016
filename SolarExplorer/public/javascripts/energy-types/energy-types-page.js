@@ -18,6 +18,7 @@ elfApp.controller('EnergyTypesController', function($scope, $http) { // , energy
                console.log(res.data);    
                console.log("xxxxxxxxxxxxxx");
                 $scope.energy = res.data;
+                $scope.lengths = res.data.length;
                //console.log(JSON.parse(data));
                //console.log(JSON.parse(res.data));
                 //energyTypesUtils.init(res.data);

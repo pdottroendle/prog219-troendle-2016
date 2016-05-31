@@ -6,7 +6,11 @@ elfApp.controller('EnergyTypesController', function($scope, $http) { // , energy
 
     $scope.mainData = 'EnergyTypes Data';
     $scope.index = 0;
-
+    
+    $scope.energyChange = function() {
+        $scope.getEnergyTypes($scope.index);
+    };
+    
     $scope.getEnergyTypes = function() {
         $http.get('data/EnergyTypes.json')
             .then(function(res) {

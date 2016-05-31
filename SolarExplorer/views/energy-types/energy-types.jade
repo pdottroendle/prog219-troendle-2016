@@ -11,3 +11,8 @@ div#energy-types
         | Description: {{energy[index].Description}}
     p
         | Unit: {{energy[index].Unit}}
+    p    
+        | Year: {{energy[index].YYYYMM.substring( 0, 4 )}}
+    p
+        | Month: {{energy[index].YYYYMM.substring( 4, 6 )}}
+    p

@@ -1,10 +1,11 @@
-button.btn.btn-primary(ng-click='getRenewable()') Energy Renewable
-
 div
     label
         | Number:
-        input(type='number', name='input', ng-model='index', min='0', max='11', required='')
+        input(type='number', name='input',  data-ng-change="yearChange()", ng-model='index', min='0', max='11', required='')
 
 hr
 
 elf-simple-format
+
+//
+  button.btn.btn-primary(ng-click='getRenewable()') Energy Renewable

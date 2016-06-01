@@ -10,7 +10,7 @@ elfApp.controller('EnergyTypesController', function($scope, $http, msnTypes) {
     $scope.energyChange = function() {
         $scope.getEnergyTypes($scope.index);
     };
-    
+
     $scope.selectMsnType = function() {
         $scope.selectedMsnType = this.msnType.description;
         console.log(selectedMsnType);
@@ -20,21 +20,19 @@ elfApp.controller('EnergyTypesController', function($scope, $http, msnTypes) {
         $scope.filteredRecordCount = $scope.filteredEnergyTypes.length;
     };
 
-    $scope.getEnergyTypes = function () {
-            $http.get('data/EnergyTypes.json') 
-                .then(function (response) {                
-                    $scope.msnTypes = msnTypes(response.data);
-                    var msn = [];
-                    for (var i = 0; i < $scope.msnTypes.length ; i++) {
-                    msn.push($scope.msnTypes[i]['msn'] + ':    ' + $scope.msnTypes[i]['description'] ); 
-                    }; 
-                    $scope.x = msn; 
-  
-                    $scope.energyTypes = response.data;
-                  }, function errorCallback(response) {
-                    console.log('Error:', response.status, response.statusText);
-                  }
-                );
+    $scope.getEnergyTypes = function() {
+        $http.get('data/EnergyTypes.json')
+            .then(function(response) {
+                $scope.msnTypes = msnTypes(response.data);
+                /*var msn = [];
+                for (var i = 0; i < $scope.msnTypes.length ; i++) {
+                msn.push($scope.msnTypes[i]['msn'] + ':    ' + $scope.msnTypes[i]['description'] );
+                };
+                $scope.x = msn; */
+                $scope.energyTypes = response.data;
+            }, function errorCallback(response) {
+                console.log('Error:', response.status, response.statusText);
+            });
     };
 });
 

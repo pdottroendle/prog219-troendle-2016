@@ -7,8 +7,30 @@ h1 Energy Types
         br
         br
         elf-energy-types
-        
+  
+  .panel.panel-default
+    .panel-heading Select MSN Type
+    .panel-body
+        div(data-ng-repeat="msnType in msnTypes track by msnType.description")
+            a(id="{{msnType.msn}}", href="", ng-click='selectMsnType()') {{msnType.msn}}: {{msnType.description}}
+            
+        energy-selectors   
+
+  
  .panel.panel-default
+    .panel-heading About Energy Types       
+    .panel-body
+        p
+        | Record Count: {{ energyTypes.length }}
+        p
+        | MSN types: {{ msnTypes.length }}
+        
+        p  
+        
+        energy-types
+        
+//
+  .panel.panel-default
     .panel-heading About MSN Types       
     .panel-body
         p 
@@ -35,11 +57,3 @@ h1 Energy Types
           {{ x[10] }}           
         p        
           {{ x[11] }}  
-           
- .panel.panel-default
-    .panel-heading About Energy Types       
-    .panel-body
-        p
-        | Record Count: {{ energyTypes.length }}
-        p
-        | MSN types: {{ msnTypes.length }}

@@ -7,6 +7,11 @@ elfApp.controller('SimpleFormatController', function($scope, $http, renewableUti
     $scope.mainData = 'Main Data';
     $scope.index = 0;
 
+    $scope.yearChange = function() {
+        //$scope.getByYear($scope.userYearInput);
+        $scope.getRenewable();
+    };
+
     $scope.getRenewable = function() {
         $http.get('data/Renewable.json')
             .then(function(res) {

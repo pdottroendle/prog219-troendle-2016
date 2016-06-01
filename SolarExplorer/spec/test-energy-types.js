@@ -2,7 +2,7 @@
  * Created by charlie on 5/20/16.
  */
 
-describe('Energy Types Suite', function() {
+fdescribe('Energy Types Suite', function() {
 
     'use strict';
 

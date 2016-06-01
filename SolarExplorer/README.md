@@ -52,3 +52,42 @@ Once the server is running, open the project in the shape of 'https://projectnam
 
 Calvert is my instructor
 
+
+setup 
+
+jou
+cd SetupLinuxBox
+./SetupSymbolicLinks
+
+temp/ 
+CreateExpressProject nameofproject
+
+rm -rf
+
+interview tips from Charles Calvert ask when failed : what could I do to improve next time
+
+ cp -r ~/workspace/SolarExplorer/ .
+ 
+ package.json
+ {
+  "name": "Week05-ExpressRoutesSolar",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "postinstall": "node_modules/bower/bin/bower install"
+  },
+  "dependencies": {
+    "bower": "~1.7.9",
+    "body-parser": "~1.13.2",    
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "jade": "~1.11.0",
+    "morgan": "~1.6.1",
+    "serve-favicon": "~2.3.0"
+  }
+}
+
+
+bower install --save

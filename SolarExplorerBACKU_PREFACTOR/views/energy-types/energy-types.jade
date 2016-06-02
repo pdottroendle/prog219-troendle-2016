@@ -1,0 +1,16 @@
+div#energys
+    p
+        | Year: {{energy-type[index].MSN}}
+    p
+        | Solar: {{energy-type[index].YYYYMM}}
+    p
+        | Geothermal: {{energy-types[index].Value}}
+    p
+        | Other biomass: {{energy-types[index].Column_Order}}
+    p
+        | Wind power: {{energy-types[index].Description}}
+    p
+        | Liquid biofuels: {{energy-types[index].Unit}}
+    
+     br {{energy-types}}
+     br {{index}}

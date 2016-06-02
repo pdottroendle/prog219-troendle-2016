@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    nav.navbar-inverse.navbar-fixed-top
+        .container
+            navbar-header
+                ul.nav.nav-pills
+                    li(ng-class="{ active: isActive('/home')}")
+                        a(ng-href='#/home') Home
+
+                    li(ng-class="{ active: isActive('/renewables/renewable')}")
+                        a(ng-href='#/renewables') Renewable
+
+                    li(ng-class="{ active: isActive('/renewables/renewable-by-year')}")
+                        a(ng-href='#/renewable-by-year') Renewable By Year
+
+                    li(ng-class="{ active: isActive('/renewables/simple-format')}")
+                        a(ng-href='#/simple-format') Simple Format
+                        
+                    li(ng-class="{ active: isActive('/energy-types/energy-types')}")
+                        a(ng-href='#/energy-types') Energy Types
+
+                    li(ng-class="{ active: isActive('/energy-types/energy-selector')}")
+                        a(ng-href='#/energy-selector') Energy Selector
+                        
+                    li(ng-class="{ active: isActive('/about')}")
+                        a(ng-href='#/about') About
+    .container
+        br
+        br
+        h2= title
+        p Welcome to #{title}
+
+        div(data-ng-view="")

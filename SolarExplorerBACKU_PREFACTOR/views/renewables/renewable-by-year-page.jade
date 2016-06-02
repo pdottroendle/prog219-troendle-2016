@@ -1,0 +1,12 @@
+
+button.btn.btn-primary(ng-click="getRenewableByYear()") Renewable by Year
+
+div
+    label
+        | Number:
+input(type="number" data-ng-model="userYearInput" data-ng-change="yearChange()" min='2006' max='2017')
+
+
+hr
+
+elf-renewable-by-year

@@ -1,4 +1,5 @@
-var energyTypes = [{
+[
+    {
         "MSN": "FFPRBUS",
         "YYYYMM": "194913",
         "Value": "28.748176",

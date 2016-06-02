@@ -13,7 +13,7 @@ elfApp.controller('EnergyTypesController', function($scope, $http, msnTypes) {
 
     $scope.selectMsnType = function() {
         $scope.selectedMsnType = this.msnType.description;
-        console.log(selectedMsnType);
+        console.log($scope.selectedMsnType);
         $scope.filteredEnergyTypes = $scope.energyTypes.filter(function(energyType) {
             return energyType.Description === $scope.selectedMsnType;
         });
@@ -34,6 +34,8 @@ elfApp.controller('EnergyTypesController', function($scope, $http, msnTypes) {
                 console.log('Error:', response.status, response.statusText);
             });
     };
+    
+    $scope.getEnergyTypes($scope.index);
 });
 
 elfApp.directive('elfEnergyTypes', function() {

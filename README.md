@@ -115,9 +115,12 @@ $.getJSON(renewableRoutes[routeType],function(response){
  renewables.renewablesList =response.renewables;
  showrenewable(renewable.renewabbleList(index);
  })
- .fail(function)
- .done
- .always
+ .fail(function(a,b,c){
+ console.log('Error',a,b,c);
+ $('#debug').html('Error occured: ',a.status);
+ })
+ .done(function){}
+ .always(function){}
  });
  }
  
@@ -349,3 +352,55 @@ we get one record
 {   "_id" : ObjectId("dzrxhsdfhsdfhsdfaghsrag......."), "keynote" : "settings" , "dataSource":"MLab", :dataType" : "JSON"     
 
 ========================================== notepad copy from week08 create from scratch
+
+
+
+=============
+============= PROG 272 MELD!!!!!!!!!!!!!!!
+
+var request = {firstName: 'foo',lastName: 'bla'} , {firstName: 'foo2',lastName: 'bla2'}
+
+$getJSON('/myRoute',request , function(result) {
+
+router.get('/myRoute', function(request, response){
+console.log(request.query[0].firstName);
+
+~/Git/JsObjects/Data code examples
+
+
+
+GIT
+
+
+$ git remote -v
+origin	git@github.com:pdottroendle/prog219-troendle-2016.git (fetch)
+origin	git@github.com:pdottroendle/prog219-troendle-2016.git (push)
+
+temp
+git clone
+
+
+~/Git/prog219-troendle-2016 (week10)
+
+
+Cbcuser@pristine2016:~/temp
+$ meld prog219-troendle-2016/ ~/Git/prog219-troendle-2016
+
+
+
+
+routes/connect.js
+doConnection: function(usesimple .... . false   ->  Mplab!!
+
+================================
+
+
+
+
+
+
+
+
+
+
+

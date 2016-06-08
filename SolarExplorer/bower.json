@@ -1,0 +1,29 @@
+{
+  "name": "Week05-SolarExplorer",
+  "description": "Angular Routes SolarExplorer",
+  "main": "SolarExplorer",
+  "authors": [
+    "Peter Troendle <pdottroendle@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "SolarExplorer",
+    "Angular",
+    "Routes"
+  ],
+  "homepage": "www.elevenware.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "angular-mocks": "^1.5.5",
+    "bootstrap": "^3.3.6"
+  }
+}

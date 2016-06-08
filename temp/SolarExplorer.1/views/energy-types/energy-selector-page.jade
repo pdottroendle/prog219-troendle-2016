@@ -1,0 +1,27 @@
+.panel.panel-default
+    .panel-heading Select MSN Type
+    .panel-body
+        div(data-ng-repeat="msnType in msnTypes track by msnType.description")
+            a(id="{{msnType.msn}}", href="", ng-click='selectMsnType()') {{msnType.msn}}: {{msnType.description}}
+            
+        energy-selectors   
+          
+h1 Energy Selected
+
+.panel.panel-default
+    .panel-heading View Filtered Records
+    .panel-body
+        input(type='number', data-ng-model='index',  data-ng-change='energyChange()' , min='0')
+        br
+        br
+        elf-energy-types
+          
+ .panel.panel-default
+    .panel-heading Record Counts    
+    .panel-body
+        p
+        | Record Count: {{ energyTypes.length }}
+        p
+        | Filtered Sub Record Counts: {{ filteredEnergyTypes.length }}
+        p
+        | MSN types: {{ msnTypes.length }}

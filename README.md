@@ -394,10 +394,18 @@ doConnection: function(usesimple .... . false   ->  Mplab!!
 
 ================================
 
+models/settings.js
 
 
+database-settings.js
+///// user.js copy
+var settings = require('../models/settings');
+var connect = require('./connect');
+cpy inside here
+// module ...
 
 
+copy Week10 routes/connect.js   routes/
 
 
 

@@ -1,3 +1,4 @@
+
 var mongoose = require('mongoose');
 
 var connect = {
@@ -18,10 +19,10 @@ var connect = {
 
     mlabConnect:function() {
         connect.connected = true;
-        var userName = 'csc';
-        var password = 'Re*lD*t*22#';
-        var siteAndPort = 'ds049848.mongolab.com:49848';
-        var databaseName = 'elvenlab01';
+        var userName = 'p94100687';
+        var password = 'p94100687';
+        var siteAndPort = 'ds013014.mlab.com:13014';
+        var databaseName = 'prog219_troendle';
         var url = 'mongodb://' + userName + ':' + password + '@' + siteAndPort + '/' + databaseName;
         console.log(url);
         mongoose.connect(url);
@@ -36,7 +37,7 @@ var connect = {
     },
 
     doConnection: function(useSimple) {
-        var connectType = useSimple || true;
+        var connectType = useSimple || false; // due to issue on local machine
         if (connectType) {
             connect.simpleConnect();
         } else {

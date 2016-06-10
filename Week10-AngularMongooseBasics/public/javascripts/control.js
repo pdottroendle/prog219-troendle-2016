@@ -1,4 +1,4 @@
-(function() {      // immediate function
+(function() {
 
     var app = angular.module('elfApp', []);
 

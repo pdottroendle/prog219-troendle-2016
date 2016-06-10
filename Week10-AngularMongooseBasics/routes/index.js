@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var scientists = require('../models/scientists');
+var presidents = require('../models/presidents');
 var allMongo = require('./all-mongo');
 var connect = require('./connect');
 //var mongoose = require('mongoose');
@@ -34,9 +35,6 @@ router.get('/all-data', function(request, response) {
 });
 
 router.get('/emptyCollection', function(request, response) {
-  
-  if (!connect.connected) { connect.doConnection(); } // added by CC
-  
   scientists.remove({}, function(err) {
     if (err) {
       response.send({result: 'err', err: err});

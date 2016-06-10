@@ -7,4 +7,4 @@ var settingsSchema = mongoose.Schema({
     "comment": String
 });
 
-module.exports = mongoose.model('prog219_lastname_setting', settingsSchema);
+module.exports = mongoose.model('prog219_troendle_setting', settingsSchema);

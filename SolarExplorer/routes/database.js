@@ -1,8 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var settings = require('../models/settings');
-var connect = require('./connect');  // ????????????????
-
+var connect = require('./connect');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -10,6 +9,7 @@ router.get('/', function(req, res, next) {
     res.send('respond with a resource');
 });
 
+// INSERT new one pass the client data
 function saveSettings(request, response) {
     console.log('request body', request.body);
 
@@ -28,7 +28,7 @@ function saveSettings(request, response) {
 
     });
 }
-
+// try to find one keynote set to settings  update data from data send back to the client
 router.post('/updateSettings', function(request, response) {
     console.log('request body', request.body);
     if (!connect.connected) {
@@ -51,7 +51,7 @@ router.post('/updateSettings', function(request, response) {
         }
     });
 });
-
+// 4 fields in there see setting.js
 router.get('/getSettings', function(request, response) {
     console.log('request body', request.body);
     if (!connect.connected) {

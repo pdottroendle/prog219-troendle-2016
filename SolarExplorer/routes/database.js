@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
     res.send('respond with a resource');
 });
 
-// INSERT new one pass the client data
+
 function saveSettings(request, response) {
     console.log('request body', request.body);
 
@@ -28,7 +28,7 @@ function saveSettings(request, response) {
 
     });
 }
-// try to find one keynote set to settings  update data from data send back to the client
+
 router.post('/updateSettings', function(request, response) {
     console.log('request body', request.body);
     if (!connect.connected) {
@@ -47,11 +47,12 @@ router.post('/updateSettings', function(request, response) {
                 doc.dataSource = request.body.dataSource;
                 doc.comment = request.body.comment;
                 doc.save();
+                response.send( {result: 'success', query: request.body });
             }
         }
     });
 });
-// 4 fields in there see setting.js
+
 router.get('/getSettings', function(request, response) {
     console.log('request body', request.body);
     if (!connect.connected) {
@@ -71,5 +72,3 @@ router.get('/getSettings', function(request, response) {
         }
     });
 });
-
-module.exports = router;

@@ -63,6 +63,21 @@ function RenewableUtils() {
             };
         });
     };
+    
+    this.getComplexFormat = function(simpleRenewables) {
+    return simpleRenewables.map(function(renewable) {
+        return {
+            Year: renewable.year,
+            'Solar (quadrillion Btu)': renewable.solar,
+            'Geothermal (quadrillion Btu)': renewable.geothermal,
+            'Wind power (quadrillion Btu)': renewable.wind,
+            'Other biomass (quadrillion Btu)': renewable.biomass,
+            'Liquid biofuels (quadrillion Btu)': renewable.biofuels,
+            'Wood biomass (quadrillion Btu)': renewable.wood,
+            'Hydropower (quadrillion Btu)': renewable.hydropower
+            };
+        });
+    };
 
 }
 

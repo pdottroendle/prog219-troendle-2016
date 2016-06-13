@@ -44,5 +44,12 @@ block content
         h2= title
         p Welcome to #{title}
 
-        div(data-ng-view="")
-
+          div(ng-controller="MongoController")
+            button(ng-click="insertValidData()") Insert Valid Data
+            button(ng-click="getAll()") Get All
+            button(ng-click="emptyCollection()") EmptyCollection
+        
+            div
+              pre {{allData}}
+        
+            p {{display}}

@@ -10,7 +10,7 @@ elfApp.controller('RenewablesController', function($scope, $http, renewableUtils
         //$scope.getByYear($scope.userYearInput);
         $scope.getRenewable();
     };
-
+/*
     $scope.getRenewable = function() {
         $http.get('data/Renewable.json')
             .then(function(res) {
@@ -19,6 +19,24 @@ elfApp.controller('RenewablesController', function($scope, $http, renewableUtils
                 $scope.renewableUtils = renewableUtils;
                 $scope.simpleFormat = renewableUtils.getSimpleFormat();
             });
+    };
+
+*/
+
+$scope.getRenewable = function() {
+    var dataType = settings.useDatabase ? 0 : 1;
+    var urls = ['/database/allRenewables', 'data/Renewable.json'];
+    $http.get(urls[dataType])
+        .then(function(res) {
+            if (settings.useDatabase) {
+                $scope.renewable = renewableUtils.getComplexFormat(res.data.renewables);
+            } else {
+                $scope.renewable = res.data;
+            }
+            renewableUtils.init($scope.renewable);
+            renewableUtils.init($scope.renewable);
+            $scope.renewableUtils = renewableUtils;
+        });
     };
 });
 

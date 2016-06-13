@@ -1,4 +1,3 @@
-
 .container
     h1 Home
 
@@ -8,19 +7,20 @@
     .panel.panel-default
         .panel-heading Settings
         .panel-body
-            form(ng-submit='submit()')                             //Database button
+            form(ng-submit='submit()')
                 select(ng-model='formData.dataType')
                     option Database
                     option JSON
                 hr
-                select(ng-model='formData.dataSource')            // Local MongoDB button
+                //select(ng-model='formData.dataSource')
+                select.form-control(ng-model='formData.dataSource')
                     option Local MongoDb
                     option MLab
                 hr
                 input(type="text", ng-model='formData.comment')
 
                 hr
-                button.btn.btn-primary(type="submit") Submit       //submit button
+                button.btn.btn-primary(type="submit") Submit
     .panel.panel-default
         .panel-heading Results
         .panel-body

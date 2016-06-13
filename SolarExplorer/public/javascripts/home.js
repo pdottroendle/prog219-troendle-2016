@@ -1,6 +1,6 @@
 var elfApp = angular.module('elfApp');
 
-elfApp.controller('HomeController', function ($scope, $http) {
+elfApp.controller('HomeController', function ($scope, $http, settings) {
     'use strict';
 
     $scope.mainData = 'HomeController MainData';
@@ -15,6 +15,7 @@ elfApp.controller('HomeController', function ($scope, $http) {
     $scope.text = 'hello';
 
     $scope.submit = function () {
+        settings.getSettings($scope.formdata);
         $http.post('/database/updateSettings', $scope.formData).then(function (result) {
             $scope.resultFull = JSON.stringify(result, null, 4);
             $scope.resultMirror = JSON.stringify(result.data.query, null, 4);
@@ -24,7 +25,6 @@ elfApp.controller('HomeController', function ($scope, $http) {
         console.log($scope.formData);
     };
 
-// retrieved real data or default (if none) from the database  
     function readSettings() {
         $http.get('/database/getSettings').then(function (result) {
             $scope.resultFull = JSON.stringify(result, null, 4);

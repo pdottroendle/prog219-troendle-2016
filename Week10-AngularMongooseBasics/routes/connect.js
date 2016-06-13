@@ -37,7 +37,7 @@ var connect = {
     },
 
     doConnection: function(useSimple) {
-        var connectType = useSimple || false; // due to issue on local machine
+        var connectType = useSimple || true; // due to issue on local machine
         if (connectType) {
             connect.simpleConnect();
         } else {

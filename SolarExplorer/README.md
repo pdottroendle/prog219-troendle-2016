@@ -38,7 +38,7 @@ note: the week 06 branch uses the Week05-SolarExplorer folder and the name was c
 [solar-start-test6]:http://www.ccalvert.net/books/CloudNotes/Assignments/AngularMongooseBasics.html
 - [Angular Solar Final Assignment][solar-start-test7]
 [solar-start-test7]:http://www.ccalvert.net/books/CloudNotes/Assignments/Prog219Final2016.html
-
+note: always git pull and cp -r ~/Git/JsObjects/Utilities/Templates/UnitTest/SolarExplorer/* .
      ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
     '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
     |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
@@ -62,4 +62,3 @@ This chat example showcases how to use `socket.io` with a static `express` serve
 Once the server is running, open the project in the shape of 'https://projectname-username.c9.io/'. As you enter your name, watch the Users list (on the left) update. Once you press Enter or Send, the message is shared with all connected clients.
 
 Calvert is my instructor
-

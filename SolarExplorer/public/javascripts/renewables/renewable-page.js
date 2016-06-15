@@ -1,33 +1,33 @@
 /*global angular*/
 var elfApp = angular.module('elfApp');
 
-elfApp.controller('RenewablesController', function($scope, $http, renewableUtils) {
+elfApp.controller('RenewablesController', function ($scope, $http, renewableUtils) {
     'use strict';
     $scope.mainData = 'Renewable Data';
     $scope.index = 0;
 
-    $scope.yearChange = function() {
+    $scope.yearChange = function () {
         //$scope.getByYear($scope.userYearInput);
         $scope.getRenewable();
     };
-    /*
-     $scope.getRenewable = function() {
-     $http.get('data/Renewable.json')
-     .then(function(res) {
-     renewableUtils.init(res.data);
-     $scope.renewable = res.data;
-     $scope.renewableUtils = renewableUtils;
-     $scope.simpleFormat = renewableUtils.getSimpleFormat();
-     });
-     };
-     */
+/*
+    $scope.getRenewable = function () {
+        $http.get('data/Renewable.json')
+            .then(function (res) {
+                renewableUtils.init(res.data);
+                $scope.renewable = res.data;
+                $scope.renewableUtils = renewableUtils;
+                $scope.simpleFormat = renewableUtils.getSimpleFormat();
+            });
+    };
+*/
 
-    $scope.getRenewable = function() {
+    $scope.getRenewable = function () {
         var dataType = settings.useDatabase ? 0 : 1;
         dataType = 1;
         var urls = ['/allRenewables/all-data', 'data/Renewable.json'];
         $http.get(urls[dataType])
-            .then(function(res) {
+            .then(function (res) {
                 if (dataType) {
                     $scope.renewable = renewableUtils.getComplexFormat(res.data.renewables);
                 } else {
@@ -40,7 +40,7 @@ elfApp.controller('RenewablesController', function($scope, $http, renewableUtils
     };
 });
 
-elfApp.directive('elfRenewable', function() {
+elfApp.directive('elfRenewable', function () {
     'use strict';
     return {
         controller: 'RenewablesController',

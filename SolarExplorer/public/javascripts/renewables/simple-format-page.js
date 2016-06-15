@@ -1,20 +1,20 @@
 /*global angular*/
 var elfApp = angular.module('elfApp');
 
-elfApp.controller('SimpleFormatController', function ($scope, $http, renewableUtils) {
+elfApp.controller('SimpleFormatController', function($scope, $http, renewableUtils) {
     'use strict';
 
     $scope.mainData = 'Main Data';
     $scope.index = 0;
 
-    $scope.yearChange = function () {
+    $scope.yearChange = function() {
         //$scope.getByYear($scope.userYearInput);
         $scope.getRenewable();
     };
 
-    $scope.getRenewable = function () {
+    $scope.getRenewable = function() {
         $http.get('data/Renewable.json')
-            .then(function (res) {
+            .then(function(res) {
                 renewableUtils.init(res.data);
                 $scope.renewable = res.data;
                 $scope.renewableUtils = renewableUtils;
@@ -28,7 +28,7 @@ elfApp.controller('SimpleFormatController', function ($scope, $http, renewableUt
 
 });
 
-elfApp.directive('elfSimpleFormat', function () {
+elfApp.directive('elfSimpleFormat', function() {
     'use strict';
     return {
         controller: 'SimpleFormatController',

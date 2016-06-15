@@ -1,7 +1,7 @@
 /*global angular*/
 var elfApp = angular.module('elfApp');
 
-elfApp.controller('EnergySelectorController', function ($scope, $http, msnTypes) {
+elfApp.controller('EnergySelectorController', function($scope, $http, msnTypes) {
     'use strict';
 
     $scope.mainData = 'Renewable Data';
@@ -13,18 +13,17 @@ elfApp.controller('EnergySelectorController', function ($scope, $http, msnTypes)
      //$scope.selectMsnType();
      };
      */
-    $scope.selectMsnType = function () {
+    $scope.selectMsnType = function() {
         $scope.selectedMsnType = this.msnType.description;
-        $scope.filteredEnergyTypes = $scope.energyTypes.filter(function (energyType) {
+        $scope.filteredEnergyTypes = $scope.energyTypes.filter(function(energyType) {
             return energyType.Description === $scope.selectedMsnType;
         });
         $scope.filteredRecordCount = $scope.filteredEnergyTypes.length;
     };
 
-
-    $scope.getEnergySelector = function () {
+    $scope.getEnergySelector = function() {
         $http.get('data/EnergyTypes.json')
-            .then(function (response) {
+            .then(function(response) {
                 $scope.energyType = response.data; // CC correction :) msnTypes(response.data);
                 console.log(response.data);
                 console.log('xxxxxxxxxxxxxx');
@@ -38,7 +37,7 @@ elfApp.controller('EnergySelectorController', function ($scope, $http, msnTypes)
     $scope.getEnergySelector();
 });
 
-elfApp.directive('elfEnergySelector', function () {
+elfApp.directive('elfEnergySelector', function() {
     'use strict';
     return {
         controller: 'EnergySelectorController',

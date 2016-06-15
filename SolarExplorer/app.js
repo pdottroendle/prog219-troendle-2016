@@ -5,7 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var database = require('./routes/database');
+var databaseSettings = require('./routes/database-settings');
+var databaseRenewables = require('./routes/database-renewables');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
@@ -25,7 +26,8 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/database', database);
+app.use('/databaseSettings/', databaseSettings); // week10
+app.use('/allRenewables/', databaseRenewables); // week10
 app.use('/', routes);
 app.use('/users', users);
 // catch 404 and forward to error handler

@@ -1,23 +1,22 @@
 var myModule = angular.module('elfApp');
 
-myModule.factory('settings', function () {
+myModule.factory('settings', function() {
     'use strict';
 
-    function settings() {
-    }
+    function settings() {}
 
     settings.useDatabase = true;
     settings.useLocalMongoDb = true;
 
-    var report = function () {
+    var report = function() {
         console.log('useDatabase', settings.useDatabase);
-        console.log('useLocalMongoDb', settings.useLocalMongoDb)
+        console.log('useLocalMongoDb', settings.useLocalMongoDb);
     };
 
-    settings.setSettings = function (settings) {
+    settings.setSettings = function(settings) {
         this.useDatabase = settings.dataType.toLowerCase() === 'database';
         this.useLocalMongoDb = settings.dataSource.toLowerCase() === 'local mongodb';
-        report()
+        report();
     };
 
     return settings;

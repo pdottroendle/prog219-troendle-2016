@@ -14,6 +14,8 @@ block content
                 ul.nav.navbar-nav
                     li.trigger-collapse(ng-class="{ active: isActive('/home')}")
                         a(ng-href='#/home') Home
+                    li.trigger-collapse(ng-class="{ active: isActive('/database')}")
+                        a(ng-href='#/database') Database    
                     li.collapse.dropdown
                         a.dropdown-toggle(data-toggle='dropdown')
                             | Renewables
@@ -36,7 +38,6 @@ block content
                                 a(ng-href='#/energy-selector')  Energy Selector
                     li.trigger-collapse(ng-class="{ active: isActive('/about')}")
                         a(ng-href='#/about') About
-
     .container
 
         br
@@ -44,12 +45,4 @@ block content
         h2= title
         p Welcome to #{title}
 
-            div(ng-controller="MongoController")
-                button(ng-click="insertValidData()") Insert Valid Data
-                button(ng-click="getAll()") Get All
-                button(ng-click="emptyCollection()") EmptyCollection
-
-                div
-                    pre {{allData}}
-
-                p {{display}}
+        div(data-ng-view="")

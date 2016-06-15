@@ -1,21 +1,21 @@
 /*global angular*/
 var elfApp = angular.module('elfApp');
 
-elfApp.controller('RenewableByYearController', function ($scope, $http, renewableUtils) {
+elfApp.controller('RenewableByYearController', function($scope, $http, renewableUtils) {
     'use strict';
 
     $scope.mainData = 'Renewable Data';
 
     $scope.userYearInput = 2006;
 
-    $scope.yearChange = function () {
+    $scope.yearChange = function() {
         //$scope.getByYear($scope.userYearInput);
         $scope.getRenewableByYear();
     };
 
-    $scope.getRenewableByYear = function () {
+    $scope.getRenewableByYear = function() {
         $http.get('data/Renewable.json')
-            .then(function (res) {
+            .then(function(res) {
                 renewableUtils.init(res.data);
                 $scope.renewable = res.data;
                 $scope.renewableUtils = renewableUtils;
@@ -27,7 +27,7 @@ elfApp.controller('RenewableByYearController', function ($scope, $http, renewabl
             });
     };
 
-    $scope.getByYear = function (year) {
+    $scope.getByYear = function(year) {
         var renewableData = $scope.renewableUtils.getByYear(year);
         $scope.index = renewableData.index;
         $scope.renewableByYear = renewableData.renewable;
@@ -36,7 +36,7 @@ elfApp.controller('RenewableByYearController', function ($scope, $http, renewabl
 
 });
 
-elfApp.directive('elfRenewableByYear', function () {
+elfApp.directive('elfRenewableByYear', function() {
     'use strict';
     return {
         controller: 'RenewableByYearController',

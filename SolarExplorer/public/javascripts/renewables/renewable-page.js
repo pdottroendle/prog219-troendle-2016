@@ -1,12 +1,12 @@
 /*global angular*/
 var elfApp = angular.module('elfApp');
 
-elfApp.controller('RenewablesController', function ($scope, $http, renewableUtils) {
+elfApp.controller('RenewablesController', function($scope, $http, renewableUtils) {
     'use strict';
     $scope.mainData = 'Renewable Data';
     $scope.index = 0;
 
-    $scope.yearChange = function () {
+    $scope.yearChange = function() {
         //$scope.getByYear($scope.userYearInput);
         $scope.getRenewable();
     };
@@ -22,11 +22,11 @@ elfApp.controller('RenewablesController', function ($scope, $http, renewableUtil
      };
      */
 
-    $scope.getRenewable = function () {
+    $scope.getRenewable = function() {
         var dataType = settings.useDatabase ? 0 : 1;
-        var urls = ['/database/allRenewables', 'data/Renewable.json'];
+        var urls = ['/allRenewables/all-data', 'data/Renewable.json'];
         $http.get(urls[dataType])
-            .then(function (res) {
+            .then(function(res) {
                 if (settings.useDatabase) {
                     $scope.renewable = renewableUtils.getComplexFormat(res.data.renewables);
                 } else {
@@ -39,7 +39,7 @@ elfApp.controller('RenewablesController', function ($scope, $http, renewableUtil
     };
 });
 
-elfApp.directive('elfRenewable', function () {
+elfApp.directive('elfRenewable', function() {
     'use strict';
     return {
         controller: 'RenewablesController',

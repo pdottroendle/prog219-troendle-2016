@@ -34,7 +34,7 @@ function insertRecords(record, response) {
 
     console.log('inserting', newRecord.lastName);
 
-    newRecord.save(function (err) {
+    newRecord.save(function(err) {
         totalRecordsSaved++;
         console.log('saved: ', newRecord.lastName, allMongo.numberOfRecords, totalRecordsSaved);
 
@@ -50,10 +50,10 @@ function insertRecords(record, response) {
     });
 }
 
-allMongo.writeData = function (fileName, data) {
+allMongo.writeData = function(fileName, data) {
     'use strict';
     var dataAsString = JSON.stringify(data, null, 4);
-    fs.writeFile(fileName, dataAsString, function (err, result) {
+    fs.writeFile(fileName, dataAsString, function(err, result) {
         if (err) {
             throw (err);
         }
@@ -61,9 +61,9 @@ allMongo.writeData = function (fileName, data) {
     });
 };
 
-allMongo.readDataAndInsert = function (response) {
+allMongo.readDataAndInsert = function(response) {
     'use strict';
-    fs.readFile('public/data/Renewable.json', function (err, recordsText) {
+    fs.readFile('public/data/Renewable.json', function(err, recordsText) {
         if (err) {
             throw (err);
         }

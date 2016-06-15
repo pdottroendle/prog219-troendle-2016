@@ -1,7 +1,7 @@
 /*global angular*/
 var elfApp = angular.module('elfApp');
 
-elfApp.controller('AboutController', function () {
+elfApp.controller('AboutController', function() {
     'use strict';
 
     var aboutController = this;

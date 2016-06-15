@@ -1,7 +1,7 @@
 /*global angular*/
 var myModule = angular.module('elfApp', ['ngRoute']);
 
-myModule.config(function ($routeProvider, $locationProvider) {
+myModule.config(function($routeProvider, $locationProvider) {
     'use strict';
 
     $routeProvider.when('/', {
@@ -41,9 +41,9 @@ myModule.config(function ($routeProvider, $locationProvider) {
         });
 });
 
-$(document).ready(function () {
+$(document).ready(function() {
     'use strict';
-    $('.navbar-nav li.trigger-collapse a').click(function (event) {
+    $('.navbar-nav li.trigger-collapse a').click(function(event) {
         $('.navbar-collapse').collapse('hide');
     });
 });

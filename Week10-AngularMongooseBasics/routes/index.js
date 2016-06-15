@@ -52,5 +52,4 @@ router.get('/:id', function(request, response) {
   response.render(request.params.id, {});
 });
 
-
 module.exports = router;

@@ -4,12 +4,19 @@ var Settings = require('../models/settings');
 var connect = require('./connect');
 
 /* GET users listing. */
-router.get('/all-data', function(req, res, next) {
+router.get('/', function(req, res, next) {
     'use strict';
     res.send('respond with a resource');
 });
 
-function saveSettings(request, response) {
+router.get('/all-data', function(request, response) {
+    'use strict';
+    console.log('AllData route invoked.');
+    if (!connect.connected) {
+        connect.doConnection();
+    }
+    
+  function saveSettings(request, response) {
     'use strict';
     console.log('request body', request.body);
 
@@ -37,7 +44,6 @@ function saveSettings(request, response) {
             });
         }
     });
-}
 
 router.post('/updateSettings', function(request, response) {
     'use strict';
@@ -100,25 +106,6 @@ router.get('/getSettings', function(request, response) {
             }
         }
     });
-});
-
-router.get('/renewables/:id', function(request, response, next) {
-    'use strict';
-    response.render('renewables/' + request.params.id, {
-        title: 'Angular Solar Explorer Troendle'
-    });
-});
-
-router.get('/energy-types/:id', function(request, response, next) {
-    'use strict';
-    response.render('energy-types/' + request.params.id, {
-        title: 'Angular Solar Explorer Troendle'
-    });
-});
-
-router.get('/:id', function(request, response) {
-    'use strict';
-    response.render(request.params.id, {});
 });
 
 module.exports = router;

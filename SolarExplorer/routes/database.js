@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var settings = require('../models/settings');
+var Settings = require('../models/settings');
 var connect = require('./connect');
 
 /* GET users listing. */
@@ -9,11 +9,10 @@ router.get('/', function(req, res, next) {
     res.send('respond with a resource');
 });
 
-
 function saveSettings(request, response) {
     console.log('request body', request.body);
 
-    var newSettings = new settings({
+    var newSettings = new Settings({
         "keyNote": 'settings',
         "dataSource": request.body.dataSource,
         "dataType": request.body.dataType,
@@ -25,6 +24,9 @@ function saveSettings(request, response) {
     newSettings.save(function(err) {
         console.log('saved: ', newSettings.dataSource, newSettings.dataType, newSettings.comment);
         response.send({ result: 'success', query: request.body});
+                if (err) {
+            throw (err);
+        }
 
     });
 }
@@ -35,7 +37,7 @@ router.post('/updateSettings', function(request, response) {
         connect.doConnection();
     }
 
-    settings.findOne({keyNote: 'settings'}, function(err, doc) {
+    Settings.findOne({keyNote: 'settings'}, function(err, doc) {
         console.log('findone', err, doc);
         if (err) {
             response.send({result: 'error'});
@@ -59,7 +61,7 @@ router.get('/getSettings', function(request, response) {
         connect.doConnection();
     }
 
-    settings.findOne({keyNote: 'settings'}, function(err, doc) {
+    Settings.findOne({keyNote: 'settings'}, function(err, doc) {
         console.log('findone', err, doc);
         if (err) {
             response.send({result: 'error'});

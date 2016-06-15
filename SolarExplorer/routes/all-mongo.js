@@ -1,41 +1,51 @@
-
 var express = require('express');
 var connect = require('./connect');
-var Scientists = require('../models/scientists');
+var ModelRecords = require('../models/renewables');
 var fs = require('fs');
-var totalScientistsSaved = 0;
+
+var allData;
+var totalRecordsSaved = 0;
 
 function allMongo() {
     'use strict';
 }
 
-allMongo.numberOfScientists = 0;
+allMongo.numberOfRecords = 0;
 
-function insertScientist(renewableOrig, response) {
+function insertRecords(record, response) {
     'use strict';
-    var renewable = getSimpleKeys(renewableOrig);
+    // var renewable = getSimpleKeys(record); refactor option
     if (!connect.connected) {
         connect.doConnection();
     }
-    var newRenewable = new Renewables({
-        'firstName': scientist.firstName,
-        'lastName': scientist.lastName,
-        'subject': scientist.subject,
-        'subjects': scientist.subjects,
-        'comments': scientist.comments
+    console.log('00000000000000000');
+    console.log(record.Year);
+
+    var newRecord = new ModelRecords({ // constructor using uppercase (grunt)
+        'Year': record.Year,
+        'Solar (quadrillion Btu)': record['Solar (quadrillion Btu)'],
+        'Geothermal (quadrillion Btu)': record['Geothermal (quadrillion Btu)'],
+        'Other biomass (quadrillion Btu)': record['Other biomass (quadrillion Btu)'],
+        'Wind power (quadrillion Btu)': record['Wind power (quadrillion Btu)'],
+        'Liquid biofuels (quadrillion Btu)': record['Liquid biofuels (quadrillion Btu)'],
+        'Wood biomass (quadrillion Btu)': record['Wood biomass (quadrillion Btu)'],
+        'Hydropower (quadrillion Btu)': record['Hydropower (quadrillion Btu)']
     });
 
-    console.log('inserting', newScientist.lastName);
+    console.log('inserting', newRecord.lastName);
 
-    newScientist.save(function(err) {
-        totalScientistsSaved++;
-        console.log('saved: ', newScientist.lastName, allMongo.numberOfScientists, totalScientistsSaved);
+    newRecord.save(function(err) { 
+        totalRecordsSaved++;
+        console.log('saved: ', newRecord.lastName, allMongo.numberOfRecords, totalRecordsSaved);
 
-        if (totalScientistsSaved === allMongo.numberOfScientists) {
+        if (totalRecordsSaved === allMongo.numberOfRecords) {
             response.send({
-                result: 'Success Saving Scientists',
-                totalSaved: totalScientistsSaved
+                result: 'Success Saving Records',
+                totalSaved: totalRecordsSaved
             });
+        }
+        if (err) {
+            throw (err);
         }
     });
 }
@@ -53,15 +63,15 @@ allMongo.writeData = function(fileName, data) {
 
 allMongo.readDataAndInsert = function(response) {
     'use strict';
-    fs.readFile('public/data/Renewable.json', function(err, scientistsText) {
+    fs.readFile('public/data/Renewable.json', function(err, recordsText) {
         if (err) {
             throw (err);
         }
-        scientistsText = JSON.parse(scientistsText);
-        totalScientistsSaved = 0;
-        allMongo.numberOfScientists = scientistsText.length;
-        for (var i = 0; i < scientistsText.length; i++) {
-            insertScientist(scientistsText[i], response);
+        var recordsTextAsString = JSON.parse(recordsText);
+        // totalRecordsSaved = 0;
+        allMongo.numberOfScientists = recordsTextAsString.length;
+        for (var i = 0; i < recordsTextAsString.length; i++) {
+            insertRecords(recordsTextAsString[i], response);
         }
     });
 };

@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var fs = require('fs');
-var scientists = require('../models/scientists');
+//var fs = require('fs');
 var allMongo = require('./all-mongo');
+var modelRenewables  = require('../models/renewables');
 var connect = require('./connect');
 
 /* GET home page. */
@@ -13,46 +13,7 @@ router.get('/', function(request, response, next) {
     });
 });
 
-router.get('/renewables/:id', function(request, response, next) {
-    'use strict';
-    response.render('renewables/' + request.params.id, {
-        title: 'Angular Solar Explorer Troendle'
-    });
-});
-
-router.get('/energy-types/:id', function(request, response, next) {
-    'use strict';
-    response.render('energy-types/' + request.params.id, {
-        title: 'Angular Solar Explorer Troendle'
-    });
-});
-
-/*
- router.get('renewables-by-year/:id', function(req, res, nest) {
- 'use strict';
- res.render('renewables/renewables-by-year' + req.params.id, {
- title: ' Angular Directive  Troendle'
- });
- });
-
- router.get('simple-format/:id', function(req, res, nest) {
- 'use strict';
- res.render('renewables/simple-format' + req.params.id, {
- title: ' Angular Directive  Troendle'
- });
-
-router.get('/:id', function(request, response, next) {
-    'use strict';
-    response.render(request.params.id, {
-        title: 'Angular Solar Explorer Troendle'
-    });
-});
-
-module.exports = router;
- });
-
-*/
-var connected = false;
+//var connected = false;
 
 router.get('/all-data', function(request, response) {
     'use strict';
@@ -62,16 +23,22 @@ router.get('/all-data', function(request, response) {
     }
 
     console.log('About to find scientists.');
-    scientists.find({}, function(err, allData) {
-        console.log(allData.length);
-        console.log(allData[0]);
-
-        allMongo.writeData('scientists.json', allData);
+    modelRenewables .find({}, function(err, data) {
+                if (err) {
+            response.send({
+                result: 'err',
+                err: err
+            }); } else {
+        console.log(data.length);
+        console.log(data[0]);
+        var allData = data;
+        
+        allMongo.writeData('renewables.json', allData);
 
         response.send({
             result: 'Success',
-            allData: allData
-        });
+            allData: data 
+        }); }
     });
 });
 
@@ -80,7 +47,7 @@ router.get('/emptyCollection', function(request, response) {
     if (!connect.connected) {
         connect.doConnection();
     }
-    scientists.remove({}, function(err) {
+    modelRenewables .remove({}, function(err) {
         if (err) {
             response.send({
                 result: 'err',
@@ -97,6 +64,20 @@ router.get('/emptyCollection', function(request, response) {
 router.get('/insertValidCollection', function(request, response) {
     'use strict';
     allMongo.readDataAndInsert(response);
+});
+
+router.get('/renewables/:id', function(request, response, next) {
+    'use strict';
+    response.render('renewables/' + request.params.id, {
+        title: 'Angular Solar Explorer Troendle'
+    });
+});
+
+router.get('/energy-types/:id', function(request, response, next) {
+    'use strict';
+    response.render('energy-types/' + request.params.id, {
+        title: 'Angular Solar Explorer Troendle'
+    });
 });
 
 router.get('/:id', function(request, response) {

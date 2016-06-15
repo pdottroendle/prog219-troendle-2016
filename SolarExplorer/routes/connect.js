@@ -4,19 +4,19 @@ var connect = {
 
     connected: false,
 
-    simpleConnect: function() {
-        var url= 'mongodb://127.0.0.1:27017/renew';
+    simpleConnect: function () {
+        var url = 'mongodb://127.0.0.1:27017/renew';
         connect.connected = true;
         mongoose.connect(url);
         var db = mongoose.connection;
         db.on('error', console.error.bind(console, 'connection error:'));
-        db.once('open', function(callback) {
+        db.once('open', function (callback) {
             connected = true;
             console.log('Opened connection to mongo');
         });
     },
 
-    mlabConnect:function() {
+    mlabConnect: function () {
         connect.connected = true;
         var userName = 'csc';
         var password = 'Re*lD*t*22#';
@@ -29,13 +29,13 @@ var connect = {
         // This part is optional
         var db = mongoose.connection;
         db.on('error', console.error.bind(console, 'connection error:'));
-        db.once('open', function(callback) {
+        db.once('open', function (callback) {
             connected = true;
             console.log('Opened connection to mongo');
         });
     },
 
-    doConnection: function(useSimple) {
+    doConnection: function (useSimple) {
         var connectType = useSimple || true;
         if (connectType) {
             connect.simpleConnect();

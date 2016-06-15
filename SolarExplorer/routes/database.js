@@ -4,7 +4,7 @@ var Settings = require('../models/settings');
 var connect = require('./connect');
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
     'use strict';
     res.send('respond with a resource');
 });
@@ -21,53 +21,59 @@ function saveSettings(request, response) {
 
     console.log('inserting', newSettings.comment);
 
-    newSettings.save(function(err) {
+    newSettings.save(function (err) {
         console.log('saved: ', newSettings.dataSource, newSettings.dataType, newSettings.comment);
-        response.send({ result: 'success', query: request.body});
-                if (err) {
+        response.send({result: 'success', query: request.body});
+        if (err) {
             throw (err);
         }
 
     });
 }
 
-router.post('/updateSettings', function(request, response) {
+router.post('/updateSettings', function (request, response) {
     console.log('request body', request.body);
     if (!connect.connected) {
         connect.doConnection();
     }
 
-    Settings.findOne({keyNote: 'settings'}, function(err, doc) {
+    Settings.findOne({keyNote: 'settings'}, function (err, doc) {
         console.log('findone', err, doc);
         if (err) {
             response.send({result: 'error'});
         } else {
-            if(doc === null) {
+            if (doc === null) {
                 saveSettings(request, response);
             } else {
                 doc.dataType = request.body.dataType;
                 doc.dataSource = request.body.dataSource;
                 doc.comment = request.body.comment;
                 doc.save();
-                response.send( {result: 'success', query: request.body });
+                response.send({result: 'success', query: request.body});
             }
         }
     });
 });
 
-router.get('/getSettings', function(request, response) {
+router.get('/getSettings', function (request, response) {
     console.log('request body', request.body);
     if (!connect.connected) {
         connect.doConnection();
     }
 
-    Settings.findOne({keyNote: 'settings'}, function(err, doc) {
+    Settings.findOne({keyNote: 'settings'}, function (err, doc) {
         console.log('findone', err, doc);
         if (err) {
             response.send({result: 'error'});
         } else {
-            if(doc === null) {
-                response.send({settings: {dataType: 'Database', dataSource: 'Local MongoDb', comment: 'Default Comment'}})
+            if (doc === null) {
+                response.send({
+                    settings: {
+                        dataType: 'Database',
+                        dataSource: 'Local MongoDb',
+                        comment: 'Default Comment'
+                    }
+                })
             } else {
                 response.send({settings: doc});
             }

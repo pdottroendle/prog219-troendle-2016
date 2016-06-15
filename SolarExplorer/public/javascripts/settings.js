@@ -2,7 +2,7 @@ var myModule = angular.module('elfApp');
 
 myModule.factory('settings', function () {
     'use strict';
-    
+
     function settings() {
     }
 

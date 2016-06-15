@@ -1,4 +1,18 @@
+/*global angular*/
 var elfApp = angular.module('elfApp');
+
+elfApp.controller('HomeController', function() {
+    'use strict';
+
+    var homeController = this;
+    homeController.homeData = 'this is home';
+
+});
+
+
+
+
+/* elfApp = angular.module('elfApp');
 
 elfApp.controller('HomeController', function($scope, $http, settings) {
     'use strict';
@@ -50,3 +64,4 @@ elfApp.directive('elfHome', function() {
         templateUrl: 'home'
     };
 });
+*/

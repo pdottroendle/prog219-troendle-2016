@@ -1,6 +1,6 @@
 (function() {
 
-    var app = angular.module('elfApp', []);
+    var app = angular.module('elfApp');//, []);
 
     app.controller('DatabaseController', function($scope, $http) {
 

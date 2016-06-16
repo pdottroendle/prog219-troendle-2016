@@ -28,12 +28,31 @@ note: the week 06 branch uses the Week05-SolarExplorer folder and the name was c
 - [Angular SolarMidterm Assignment][solar-start-test4]
 [solar-start-test4]:http://www.ccalvert.net/books/CloudNotes/Assignments/Prog219Midterm2016.html
 
+
+
+## Week 10 Branch
+
+- [Mongo Starter Assignment][solar-start-test5]
+[solar-start-test5]:http://www.ccalvert.net/books/CloudNotes/Assignments/MongoStarter.html
+- [Angular Mongoose Assignment][solar-start-test6]
+[solar-start-test6]:http://www.ccalvert.net/books/CloudNotes/Assignments/AngularMongooseBasics.html
+- [Angular Solar Final Assignment][solar-start-test7]
+[solar-start-test7]:http://www.ccalvert.net/books/CloudNotes/Assignments/Prog219Final2016.html
+note: always git pull and cp -r ~/Git/JsObjects/Utilities/Templates/UnitTest/SolarExplorer/* .
+
+note: please install the following to make sure all is set:
+- npm install && bower install
+- (bower install bootstrap angular angular-route --save)
+- bower install bootswatch --save (in bower.json modify 6+2 it ought to be without +2)
+- (sudo apt-get install libkrb5-dev)
+- npm install mongoose --save
+
      ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
     '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
+    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--,
     '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
      `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+    -----------------------------------------------------------------
 
 
 Welcome to your Node.js project on Cloud9 IDE!
@@ -51,43 +70,3 @@ This chat example showcases how to use `socket.io` with a static `express` serve
 Once the server is running, open the project in the shape of 'https://projectname-username.c9.io/'. As you enter your name, watch the Users list (on the left) update. Once you press Enter or Send, the message is shared with all connected clients.
 
 Calvert is my instructor
-
-
-setup 
-
-jou
-cd SetupLinuxBox
-./SetupSymbolicLinks
-
-temp/ 
-CreateExpressProject nameofproject
-
-rm -rf
-
-interview tips from Charles Calvert ask when failed : what could I do to improve next time
-
- cp -r ~/workspace/SolarExplorer/ .
- 
- package.json
- {
-  "name": "Week05-ExpressRoutesSolar",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www",
-    "postinstall": "node_modules/bower/bin/bower install"
-  },
-  "dependencies": {
-    "bower": "~1.7.9",
-    "body-parser": "~1.13.2",    
-    "cookie-parser": "~1.3.5",
-    "debug": "~2.2.0",
-    "express": "~4.13.1",
-    "jade": "~1.11.0",
-    "morgan": "~1.6.1",
-    "serve-favicon": "~2.3.0"
-  }
-}
-
-
-bower install --save

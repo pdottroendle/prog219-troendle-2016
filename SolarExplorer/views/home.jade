@@ -1,9 +1,28 @@
-p &nbsp;
-h3 This is the home page 
-p &nbsp;
-p &nbsp;
-p Dear User, click on the panes for navigation
-p To return here select the home pane!
-p                         Thank You !
+.container
+    h1 Home
 
-p {{homeController.homeData}}
+    #qux
+        p MainData: {{mainData}}
+
+    .panel.panel-default
+        .panel-heading Settings
+        .panel-body
+            form(ng-submit='submit()')
+                select(ng-model='formData.dataType')
+                    option Database
+                    option JSON
+                hr
+                select(ng-model='formData.dataSource')
+                    option Local MongoDb
+                    option MLab
+                hr
+                input(type="text", ng-model='formData.comment')
+
+                hr
+                button.btn.btn-primary(type="submit") Submit
+    .panel.panel-default
+        .panel-heading Results
+        .panel-body
+            pre Mirror: {{resultMirror}}
+            hr
+            pre Full: {{resultFull}}

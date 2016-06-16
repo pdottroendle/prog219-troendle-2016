@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Settings = require('../models/settings');
+var allMongo = require('./all-mongo');
 var connect = require('./connect');
 
 /* GET users listing. */
@@ -8,6 +9,8 @@ router.get('/', function (req, res, next) {
     'use strict';
     res.send('respond with a resource');
 });
+
+var connected = false;
 
 router.get('/all-data', function (request, response) {
     'use strict';

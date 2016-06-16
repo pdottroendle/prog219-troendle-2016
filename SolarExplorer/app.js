@@ -7,8 +7,8 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var databaseSettings = require('./routes/database-settings');
-var databaseRenewables = require('./routes/database-renewables');
+var dbSettings = require('./routes/database-settings');
+var dbRenewables = require('./routes/database-renewables');
 var routesEnergy = require('./routes/energy-types');
 var routesRenewables = require('./routes/renewables');
 
@@ -30,8 +30,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-app.use('/databaseSettings', databaseSettings); // week10
-app.use('/allRenewables', databaseRenewables); // week10
+app.use('/databaseSettings', dbSettings); // week10
+app.use('/allRenewables', dbRenewables); // week10
 app.use('/energy-types', routesEnergy); // week10
 app.use('/renewables', routesRenewables); // week10
 

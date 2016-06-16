@@ -39,6 +39,9 @@ note: the week 06 branch uses the Week05-SolarExplorer folder and the name was c
 - [Angular Solar Final Assignment][solar-start-test7]
 [solar-start-test7]:http://www.ccalvert.net/books/CloudNotes/Assignments/Prog219Final2016.html
 note: always git pull and cp -r ~/Git/JsObjects/Utilities/Templates/UnitTest/SolarExplorer/* .
+
+bower install bootswatch --save
+
      ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
     '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
     |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 

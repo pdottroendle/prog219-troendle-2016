@@ -8,6 +8,10 @@ myModule.config(function($routeProvider, $locationProvider) {
             templateUrl: 'home',
             controller: 'HomeController'
         })
+        .when('/database', {
+            templateUrl: 'database',
+            controller: 'DatabaseController'
+        })
         .when('/renewable-by-year', {
             templateUrl: 'renewables/renewable-by-year-page',
             controller: 'RenewableByYearController'

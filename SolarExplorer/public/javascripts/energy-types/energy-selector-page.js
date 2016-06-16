@@ -7,12 +7,11 @@ elfApp.controller('EnergySelectorController', function($scope, $http, msnTypes) 
     $scope.mainData = 'Renewable Data';
     $scope.index = 0;
 
-    /*
-     $scope.energyChange = function() {
-     $scope.getEnergySelector($scope.index);
-     //$scope.selectMsnType();
-     };
-     */
+    $scope.energyChange = function() {
+        $scope.getEnergySelector($scope.index);
+        //$scope.selectMsnType();
+    };
+
     $scope.selectMsnType = function() {
         $scope.selectedMsnType = this.msnType.description;
         $scope.filteredEnergyTypes = $scope.energyTypes.filter(function(energyType) {
@@ -21,20 +20,25 @@ elfApp.controller('EnergySelectorController', function($scope, $http, msnTypes) 
         $scope.filteredRecordCount = $scope.filteredEnergyTypes.length;
     };
 
+    /*
+    $scope.getByYear = function(year) {
+    var renewableData = $scope.renewableUtils.getByYear(year);
+    $scope.index = renewableData.index;
+    $scope.renewableByYear = renewableData.renewable;
+    return $scope.renewableByYear;
+        };  */
+
     $scope.getEnergySelector = function() {
         $http.get('data/EnergyTypes.json')
             .then(function(response) {
-                $scope.energyType = response.data; // CC correction :) msnTypes(response.data);
+                $scope.energyType = msnTypes(response.data);
                 console.log(response.data);
                 console.log('xxxxxxxxxxxxxx');
                 //$scope.energyTypes = res.data;
-                $scope.recordCount = response.data.length; // CC correction :)
-                $scope.msnTypes = msnTypes(response.data); // CC correction :)
             }, function errorCallback(response) {
                 console.log('Error:', response.status, response.statusText);
             });
     };
-    $scope.getEnergySelector();
 });
 
 elfApp.directive('elfEnergySelector', function() {

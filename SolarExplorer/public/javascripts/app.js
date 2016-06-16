@@ -1,16 +1,12 @@
 /*global angular*/
 var myModule = angular.module('elfApp', ['ngRoute']);
 
-myModule.config(function ($routeProvider, $locationProvider) {
+myModule.config(function($routeProvider, $locationProvider) {
     'use strict';
 
     $routeProvider.when('/', {
             templateUrl: 'home',
             controller: 'HomeController'
-        })
-        .when('/database', {
-            templateUrl: 'database',
-            controller: 'DatabaseController'
         })
         .when('/renewable-by-year', {
             templateUrl: 'renewables/renewable-by-year-page',
@@ -41,9 +37,9 @@ myModule.config(function ($routeProvider, $locationProvider) {
         });
 });
 
-$(document).ready(function () {
+$(document).ready(function() {
     'use strict';
-    $('.navbar-nav li.trigger-collapse a').click(function (event) {
+    $('.navbar-nav li.trigger-collapse a').click(function(event) {
         $('.navbar-collapse').collapse('hide');
     });
 });

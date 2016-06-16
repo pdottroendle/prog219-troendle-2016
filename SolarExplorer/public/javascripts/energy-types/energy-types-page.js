@@ -25,16 +25,16 @@ elfApp.controller('EnergyTypesController', function($scope, $http, msnTypes) {
             .then(function(response) {
                 $scope.msnTypes = msnTypes(response.data);
                 /*var msn = [];
-                 for (var i = 0; i < $scope.msnTypes.length ; i++) {
-                 msn.push($scope.msnTypes[i]['msn'] + ':    ' + $scope.msnTypes[i]['description'] );
-                 };
-                 $scope.x = msn; */
+                for (var i = 0; i < $scope.msnTypes.length ; i++) {
+                msn.push($scope.msnTypes[i]['msn'] + ':    ' + $scope.msnTypes[i]['description'] );
+                };
+                $scope.x = msn; */
                 $scope.energyTypes = response.data;
             }, function errorCallback(response) {
                 console.log('Error:', response.status, response.statusText);
             });
     };
-
+    
     $scope.getEnergyTypes($scope.index);
 });
 

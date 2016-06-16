@@ -1,6 +1,4 @@
-
 var express = require('express');
-//var router = express.Router();
 var connect = require('./connect');
 var presidents = require('../models/presidents');
 var scientists = require('../models/scientists');

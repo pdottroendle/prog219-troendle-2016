@@ -43,9 +43,11 @@ router.get('/all-data', function (request, response) {
                     query: request.body
                 });
             }
-        });
+        });    
+    }
+});
 
-        router.post('/updateSettings', function (request, response) {
+router.get('/updateSettings', function (request, response) {
             'use strict';
             console.log('request body', request.body);
             if (!connect.connected) {
@@ -71,10 +73,10 @@ router.get('/all-data', function (request, response) {
                         doc.save();
                     }
                 }
-            });
-        });
+            });    
+});
 
-        router.get('/getSettings', function (request, response) {
+router.get('/getSettings', function (request, response) {
             'use strict';
             console.log('request body', request.body);
             if (!connect.connected) {
@@ -106,6 +108,6 @@ router.get('/all-data', function (request, response) {
                     }
                 }
             });
-        });
+});
 
-        module.exports = router;
+module.exports = router;

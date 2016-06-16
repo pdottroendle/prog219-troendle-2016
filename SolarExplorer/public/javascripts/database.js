@@ -28,10 +28,11 @@ app.controller('DatabaseController', function ($scope, $http) {
     };
 });
 
+/*
 elfApp.directive('elfDatabase', function () {
     'use strict';
     return {
         controller: 'DatabaseController',
         templateUrl: 'database'
     };
-});
+});*/

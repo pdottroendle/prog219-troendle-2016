@@ -5,12 +5,11 @@ var fs = require('fs');
 
 var allData;
 var totalRecordsSaved = 0;
+var numberOfRecords = 0;
 
 function allMongo() {
     'use strict';
 }
-
-allMongo.numberOfRecords = 0;
 
 function insertRecords(record, response) {
     'use strict';
@@ -32,13 +31,13 @@ function insertRecords(record, response) {
         'Hydropower (quadrillion Btu)': record['Hydropower (quadrillion Btu)']
     });
 
-    console.log('inserting', newRecord.lastName);
+    console.log('inserting', newRecord.Year);
 
     newRecord.save(function (err) {
         totalRecordsSaved++;
-        console.log('saved: ', newRecord.lastName, allMongo.numberOfRecords, totalRecordsSaved);
+        console.log('saved: ', newRecord.Year, numberOfRecords, totalRecordsSaved);
 
-        if (totalRecordsSaved === allMongo.numberOfRecords) {
+        if (totalRecordsSaved === numberOfRecords) {
             response.send({
                 result: 'Success Saving Records',
                 totalSaved: totalRecordsSaved
@@ -69,7 +68,7 @@ allMongo.readDataAndInsert = function (response) {
         }
         var recordsTextAsString = JSON.parse(recordsText);
         // totalRecordsSaved = 0;
-        allMongo.numberOfScientists = recordsTextAsString.length;
+        numberOfRecords = recordsTextAsString.length;
         for (var i = 0; i < recordsTextAsString.length; i++) {
             insertRecords(recordsTextAsString[i], response);
         }

@@ -1,0 +1,27 @@
+<h1>Energy Types</h1><div class="panel panel-default"><div class="panel-heading">Iterate over All Energy Types</div><div class="panel-body"><input type="number" data-ng-model="index" data-ng-change="energyChange()" min="0"/><br/><br/><elf-energy-types></elf-energy-types></div></div><div class="panel panel-default"><div class="panel-heading">Select MSN Type</div><div class="panel-body"><div data-ng-repeat="msnType in msnTypes track by msnType.description"><a id="{{msnType.msn}}" href="" ng-click="selectMsnType()">{{msnType.msn}}: {{msnType.description}}</a></div><energy-selectors>  </energy-selectors></div></div><div class="panel panel-default"><div class="panel-heading">About Energy Types       </div><div class="panel-body"><p></p>Record Count: {{ energyTypes.length }}<p></p>MSN types: {{ msnTypes.length }}<p> </p><energy-types></energy-types></div></div><!--.panel.panel-default
+  .panel-heading About MSN Types       
+  .panel-body
+      p 
+        {{ x[0] }}           
+      p        
+        {{ x[1] }}     
+      p 
+        {{ x[2] }}           
+      p        
+        {{ x[3] }}  
+      p 
+        {{ x[4] }}           
+      p        
+        {{ x[5] }}     
+      p 
+        {{ x[6] }}           
+      p        
+        {{ x[7] }}  
+      p 
+        {{ x[8] }}           
+      p        
+        {{ x[9] }}     
+      p 
+        {{ x[10] }}           
+      p        
+        {{ x[11] }}  -->

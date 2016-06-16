@@ -1,7 +1,7 @@
 /*global angular*/
 var elfApp = angular.module('elfApp');
 
-elfApp.controller('RenewablesController', function ($scope, $http, renewableUtils) {
+elfApp.controller('RenewablesController', function ($scope, $http, renewableUtils, settings) {
     'use strict';
     $scope.mainData = 'Renewable Data';
     $scope.index = 0;

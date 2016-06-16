@@ -1,15 +1,3 @@
-/*global angular*/
-var elfApp = angular.module('elfApp');
-
-elfApp.controller('HomeController', function () {
-    'use strict';
-
-    var homeController = this;
-    homeController.homeData = 'this is home';
-
-});
-
-*/
 elfApp = angular.module('elfApp');
 
 elfApp.controller('HomeController', function ($scope, $http, settings) {
@@ -28,7 +16,7 @@ elfApp.controller('HomeController', function ($scope, $http, settings) {
 
     $scope.submit = function () {
         settings.getSettings($scope.formdata);
-        $http.post('/databaseSettings/updateSettings', $scope.formData).then(function (result) {
+        $http.get('/databaseSettings/updateSettings', $scope.formData).then(function (result) {
             $scope.resultFull = JSON.stringify(result, null, 4);
             $scope.resultMirror = JSON.stringify(result.data.query, null, 4);
         }, function (err) {
@@ -55,11 +43,11 @@ elfApp.controller('HomeController', function ($scope, $http, settings) {
     readSettings();
 });
 
+/* is it needed ?
 elfApp.directive('elfHome', function () {
     'use strict';
     return {
         controller: 'HomeController',
         templateUrl: 'home'
     };
-});
-*/
+}); */

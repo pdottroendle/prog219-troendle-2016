@@ -8,7 +8,9 @@ describe('Energy Types Suite', function() {
 
     var $httpBackend;
     var scope;
-    var settings = { useDatabase: false };
+    var settings = {
+        useDatabase: false
+    };
 
     // Set up the module
     beforeEach(module('elfApp'));

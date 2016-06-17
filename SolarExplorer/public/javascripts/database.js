@@ -1,9 +1,8 @@
 (function() {
-
-    var app = angular.module('elfApp');//, []);
+    'use strict';
+    var app = angular.module('elfApp'); //, []);
 
     app.controller('DatabaseController', function($scope, $http) {
-
 
         $scope.insertValidData = function() {
             $http.get('/allRenewables/insertValidCollection').then(function(data) {
@@ -14,7 +13,9 @@
         };
 
         $scope.emptyCollection = function() {
-            $http.get('/allRenewables/emptyCollection', {name: 'lincoln'}).then(function(data) {
+            $http.get('/allRenewables/emptyCollection', {
+                name: 'lincoln'
+            }).then(function(data) {
                 $scope.display = data;
             }, function(err) {
                 console.log(err);

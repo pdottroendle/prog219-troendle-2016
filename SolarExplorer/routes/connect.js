@@ -4,20 +4,20 @@ var connect = {
 
     connected: false,
 
-    simpleConnect: function () {
+    simpleConnect: function() {
         'use strict';
         var url = 'mongodb://127.0.0.1:27017/renew';
         connect.connected = true;
         mongoose.connect(url);
         var db = mongoose.connection;
         db.on('error', console.error.bind(console, 'connection error:'));
-        db.once('open', function (callback) {
+        db.once('open', function(callback) {
             connect.connected = true;
             console.log('Opened connection to mongo');
         });
     },
 
-    mlabConnect: function () {
+    mlabConnect: function() {
         'use strict';
         //ds013014.mlab.com:13014/prog219_troendle
         connect.connected = true;
@@ -32,13 +32,13 @@ var connect = {
         // This part is optional
         var db = mongoose.connection;
         db.on('error', console.error.bind(console, 'connection error:'));
-        db.once('open', function (callback) {
+        db.once('open', function(callback) {
             connect.connected = true;
             console.log('Opened connection to mongo');
         });
     },
 
-    doConnection: function (useSimple) {
+    doConnection: function(useSimple) {
         'use strict';
         var connectType = useSimple || true;
         if (connectType) {

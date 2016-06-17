@@ -34,7 +34,7 @@ elfApp.controller('EnergyTypesController', function($scope, $http, msnTypes) {
                 console.log('Error:', response.status, response.statusText);
             });
     };
-    
+
     $scope.getEnergyTypes($scope.index);
 });
 

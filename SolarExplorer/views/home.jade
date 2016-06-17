@@ -8,11 +8,13 @@
         .panel-heading Settings
         .panel-body
             form(ng-submit='submit()')
-                select(ng-model='formData.dataType')
+                //select(ng-model='formData.dataType')
+                select.form-control(ng-model='formData.dataType')
                     option Database
                     option JSON
                 hr
-                select(ng-model='formData.dataSource')
+                //select(ng-model='formData.dataSource')
+                select.form-control(ng-model='formData.dataSource')
                     option Local MongoDb
                     option MLab
                 hr

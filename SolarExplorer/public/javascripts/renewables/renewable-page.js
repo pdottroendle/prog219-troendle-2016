@@ -13,7 +13,8 @@ elfApp.controller('RenewablesController', function ($scope, $http, renewableUtil
 
     $scope.getRenewable = function () {
         var dataType = settings.useDatabase ? 0 : 1;
-        var dataType = 1; // check how it was
+        console.log('factory ----> value of DB', settings.useDatabase);
+        //var dataType = 1; // check how it was
         var urls = ['/allRenewables/all-data', 'data/Renewable.json'];
         $http.get(urls[dataType])
             .then(function (res) {

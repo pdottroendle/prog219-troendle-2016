@@ -1,7 +1,7 @@
 [
     {
-        "_id": "57650978b52a99ff098f3c2a",
-        "Year": "2017",
+        "_id": "576549d7fa9a76b1154d9ba2",
+        "Year": "2999017",
         "Solar (quadrillion Btu)": "0.8045307",
         "Geothermal (quadrillion Btu)": "0.2349284",
         "Other biomass (quadrillion Btu)": "0.50916",
@@ -12,7 +12,7 @@
         "__v": 0
     },
     {
-        "_id": "57650978b52a99ff098f3c2b",
+        "_id": "576549d7fa9a76b1154d9ba3",
         "Year": "2016",
         "Solar (quadrillion Btu)": "0.6298938",
         "Geothermal (quadrillion Btu)": "0.232438",
@@ -24,7 +24,7 @@
         "__v": 0
     },
     {
-        "_id": "57650978b52a99ff098f3c2c",
+        "_id": "576549d7fa9a76b1154d9ba4",
         "Year": "2015",
         "Solar (quadrillion Btu)": "0.532293912",
         "Geothermal (quadrillion Btu)": "0.22367033",
@@ -36,7 +36,7 @@
         "__v": 0
     },
     {
-        "_id": "57650978b52a99ff098f3c2d",
+        "_id": "576549d7fa9a76b1154d9ba5",
         "Year": "2014",
         "Solar (quadrillion Btu)": "0.420069628",
         "Geothermal (quadrillion Btu)": "0.214489708",
@@ -48,7 +48,7 @@
         "__v": 0
     },
     {
-        "_id": "57650978b52a99ff098f3c2e",
+        "_id": "576549d7fa9a76b1154d9ba6",
         "Year": "2013",
         "Solar (quadrillion Btu)": "0.305189657",
         "Geothermal (quadrillion Btu)": "0.214006166",
@@ -60,7 +60,7 @@
         "__v": 0
     },
     {
-        "_id": "57650978b52a99ff098f3c2f",
+        "_id": "576549d7fa9a76b1154d9ba7",
         "Year": "2012",
         "Solar (quadrillion Btu)": "0.227349746",
         "Geothermal (quadrillion Btu)": "0.211592042",
@@ -72,7 +72,19 @@
         "__v": 0
     },
     {
-        "_id": "57650978b52a99ff098f3c31",
+        "_id": "576549d7fa9a76b1154d9ba8",
+        "Year": "2011",
+        "Solar (quadrillion Btu)": "0.171085654",
+        "Geothermal (quadrillion Btu)": "0.212310919",
+        "Other biomass (quadrillion Btu)": "0.461793307",
+        "Wind power (quadrillion Btu)": "1.1670944041",
+        "Liquid biofuels (quadrillion Btu)": "1.1495521148",
+        "Wood biomass (quadrillion Btu)": "2.010246451",
+        "Hydropower (quadrillion Btu)": "3.102852243",
+        "__v": 0
+    },
+    {
+        "_id": "576549d7fa9a76b1154d9ba9",
         "Year": "2010",
         "Solar (quadrillion Btu)": "0.125900857",
         "Geothermal (quadrillion Btu)": "0.207978644",
@@ -84,31 +96,7 @@
         "__v": 0
     },
     {
-        "_id": "57650978b52a99ff098f3c32",
-        "Year": "2009",
-        "Solar (quadrillion Btu)": "0.09776564",
-        "Geothermal (quadrillion Btu)": "0.200184503",
-        "Other biomass (quadrillion Btu)": "0.451686907",
-        "Wind power (quadrillion Btu)": "0.72112661688",
-        "Liquid biofuels (quadrillion Btu)": "0.90231796406",
-        "Wood biomass (quadrillion Btu)": "1.931010018",
-        "Hydropower (quadrillion Btu)": "2.66882412",
-        "__v": 0
-    },
-    {
-        "_id": "57650978b52a99ff098f3c33",
-        "Year": "2008",
-        "Solar (quadrillion Btu)": "0.088767018",
-        "Geothermal (quadrillion Btu)": "0.192433129",
-        "Other biomass (quadrillion Btu)": "0.435263359",
-        "Wind power (quadrillion Btu)": "0.54554798858",
-        "Liquid biofuels (quadrillion Btu)": "0.78437286524",
-        "Wood biomass (quadrillion Btu)": "2.058985068",
-        "Hydropower (quadrillion Btu)": "2.511108471",
-        "__v": 0
-    },
-    {
-        "_id": "57650978b52a99ff098f3c34",
+        "_id": "576549d7fa9a76b1154d9bac",
         "Year": "2007",
         "Solar (quadrillion Btu)": "0.075657103",
         "Geothermal (quadrillion Btu)": "0.185774215",
@@ -120,7 +108,7 @@
         "__v": 0
     },
     {
-        "_id": "57650978b52a99ff098f3c35",
+        "_id": "576549d7fa9a76b1154d9bad",
         "Year": "2006",
         "Solar (quadrillion Btu)": "0.06844104",
         "Geothermal (quadrillion Btu)": "0.18120028",
@@ -132,15 +120,27 @@
         "__v": 0
     },
     {
-        "_id": "57650978b52a99ff098f3c30",
-        "Year": "2011",
-        "Solar (quadrillion Btu)": "0.171085654",
-        "Geothermal (quadrillion Btu)": "0.212310919",
-        "Other biomass (quadrillion Btu)": "0.461793307",
-        "Wind power (quadrillion Btu)": "1.1670944041",
-        "Liquid biofuels (quadrillion Btu)": "1.1495521148",
-        "Wood biomass (quadrillion Btu)": "2.010246451",
-        "Hydropower (quadrillion Btu)": "3.102852243",
+        "_id": "576549d7fa9a76b1154d9baa",
+        "Year": "2009",
+        "Solar (quadrillion Btu)": "0.09776564",
+        "Geothermal (quadrillion Btu)": "0.200184503",
+        "Other biomass (quadrillion Btu)": "0.451686907",
+        "Wind power (quadrillion Btu)": "0.72112661688",
+        "Liquid biofuels (quadrillion Btu)": "0.90231796406",
+        "Wood biomass (quadrillion Btu)": "1.931010018",
+        "Hydropower (quadrillion Btu)": "2.66882412",
+        "__v": 0
+    },
+    {
+        "_id": "576549d7fa9a76b1154d9bab",
+        "Year": "2008",
+        "Solar (quadrillion Btu)": "0.088767018",
+        "Geothermal (quadrillion Btu)": "0.192433129",
+        "Other biomass (quadrillion Btu)": "0.435263359",
+        "Wind power (quadrillion Btu)": "0.54554798858",
+        "Liquid biofuels (quadrillion Btu)": "0.78437286524",
+        "Wood biomass (quadrillion Btu)": "2.058985068",
+        "Hydropower (quadrillion Btu)": "2.511108471",
         "__v": 0
     }
 ]

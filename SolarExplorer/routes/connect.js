@@ -23,7 +23,7 @@ var connect = {
         connect.connected = true;
         var userName = 'p94100687';
         var password = 'p94100687';
-        var siteAndPort = 'ds013014.mlab.com:13014/';
+        var siteAndPort = 'ds013014.mlab.com:13014';
         var databaseName = 'prog219_troendle';
         var url = 'mongodb://' + userName + ':' + password + '@' + siteAndPort + '/' + databaseName;
         console.log(url);
@@ -37,8 +37,18 @@ var connect = {
             console.log('Opened connection to mongo');
         });
     },
-
+    
     doConnection: function(useSimple) {
+        'use strict';
+        connect.simpleConnect();
+    },
+
+    doConnectionMlab: function(useSimple) {
+        'use strict';
+        connect.mlabConnect();
+    }
+    
+    /*doConnection: function(useSimple) {
         'use strict';
         var connectType = useSimple || true;
         if (connectType) {
@@ -46,7 +56,7 @@ var connect = {
         } else {
             connect.mlabConnect();
         }
-    }
+    }*/
 };
 
 module.exports = connect;

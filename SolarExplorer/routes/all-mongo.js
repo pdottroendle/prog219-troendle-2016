@@ -67,7 +67,7 @@ allMongo.readDataAndInsert = function(response) {
             throw (err);
         }
         var recordsTextAsString = JSON.parse(recordsText);
-        // totalRecordsSaved = 0;
+        totalRecordsSaved = 0;
         numberOfRecords = recordsTextAsString.length;
         for (var i = 0; i < recordsTextAsString.length; i++) {
             insertRecords(recordsTextAsString[i], response);

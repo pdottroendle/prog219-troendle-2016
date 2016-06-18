@@ -37,7 +37,7 @@ var connect = {
             console.log('Opened connection to mongo');
         });
     },
-    
+
     doConnection: function(useSimple) {
         'use strict';
         connect.simpleConnect();
@@ -47,16 +47,16 @@ var connect = {
         'use strict';
         connect.mlabConnect();
     }
-    
+
     /*doConnection: function(useSimple) {
-        'use strict';
-        var connectType = useSimple || true;
-        if (connectType) {
-            connect.simpleConnect();
-        } else {
-            connect.mlabConnect();
-        }
-    }*/
+     'use strict';
+     var connectType = useSimple || true;
+     if (connectType) {
+     connect.simpleConnect();
+     } else {
+     connect.mlabConnect();
+     }
+     }*/
 };
 
 module.exports = connect;

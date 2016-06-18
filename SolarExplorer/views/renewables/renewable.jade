@@ -22,5 +22,23 @@ div &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs
 
     br
 
-    p   note: the simple form is used
+    p   note: the simple form is used above, below the normal
+
+div#renewable
+        p
+            | Year: {{renewable[index].Year}}
+        p
+            | Solar: {{renewable[index]["Solar (quadrillion Btu)"]}}
+        p
+            | Geothermal: {{renewable[index]["Geothermal (quadrillion Btu)"]}}
+        p
+            | Other biomass: {{renewable[index]["Other biomass (quadrillion Btu)"]}}
+        p
+            | Wind power: {{renewable[index]["Wind power (quadrillion Btu)"]}}
+        p
+            | Liquid biofuels: {{renewable[index]["Liquid biofuels (quadrillion Btu)"]}}
+        p
+            | Wood biomass: {{renewable[index]["Wood biomass (quadrillion Btu)"]}}
+        p
+            | Hydropower: {{renewable[index]["Hydropower (quadrillion Btu)"]}}
 

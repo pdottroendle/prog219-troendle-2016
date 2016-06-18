@@ -1,17 +1,26 @@
-div#renewable
+div &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Renewable Energy
+    br
+    br
+
     p
-        | Year: {{renewable[index].Year}}
+        | Year: {{simpleFormat[index].year}}
     p
-        | Solar: {{renewable[index]["Solar (quadrillion Btu)"]}}
+        | Solar: {{simpleFormat[index].solar}}
     p
-        | Geothermal: {{renewable[index]["Geothermal (quadrillion Btu)"]}}
+        | Geothermal: {{simpleFormat[index].geo}}
     p
-        | Other biomass: {{renewable[index]["Other biomass (quadrillion Btu)"]}}
+        | Other biomass: {{simpleFormat[index].biomass}}
     p
-        | Wind power: {{renewable[index]["Wind power (quadrillion Btu)"]}}
+        | Wind power: {{simpleFormat[index].wind}}
     p
-        | Liquid biofuels: {{renewable[index]["Liquid biofuels (quadrillion Btu)"]}}
+        | Liquid biofuels: {{simpleFormat[index].biofuels}}
     p
-        | Wood biomass: {{renewable[index]["Wood biomass (quadrillion Btu)"]}}
+        | Wood biomass: {{simpleFormat[index].wood}}
     p
-        | Hydropower: {{renewable[index]["Hydropower (quadrillion Btu)"]}}
+        | Hydropower: {{simpleFormat[index].hydro}}
+    p
+
+    br
+
+    p   note: the simple form is used
+

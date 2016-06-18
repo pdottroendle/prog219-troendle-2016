@@ -17,9 +17,10 @@ elfApp.controller('RenewablesController', function($scope, $http, renewableUtils
                 renewableUtils.init(res.data);
                 $scope.renewable = res.data;
                 $scope.renewableUtils = renewableUtils;
-                $scope.simpleFormat = renewableUtils.getSimpleFormat();
+                $scope.simpleFormat = renewableUtils.getSimpleStringFormat();
             });
     };
+
 });
 
 elfApp.directive('elfRenewable', function() {

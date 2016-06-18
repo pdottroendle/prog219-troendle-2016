@@ -47,9 +47,15 @@ function RenewableUtils() {
     this.getSimpleFormat = function() {
         return renewables.map(function(renewable) {
             return {
+                //year: Number(renewable.Year),
+                //solar: Number(renewable['Solar (quadrillion Btu)']),
                 geo: Number(renewable['Geothermal (quadrillion Btu)']),
+                solar: Number(renewable['Solar (quadrillion Btu)']),
+                //biomass: Number(renewable['Other biomass (quadrillion Btu)']),
                 wind: Number(renewable['Wind power (quadrillion Btu)']),
-                solar: Number(renewable['Solar (quadrillion Btu)'])
+                //biofuels: Number(renewable['Liquid biofuels (quadrillion Btu)']),
+                //wood: Number(renewable['Wood biomass (quadrillion Btu)']),
+                //hydro: Number(renewable['Hydropower (quadrillion Btu)'])
             };
         });
     };
@@ -57,13 +63,32 @@ function RenewableUtils() {
     this.getSimpleStringFormat = function() {
         return renewables.map(function(renewable) {
             return {
+                year: String(renewable.Year),
+                solar: String(renewable['Solar (quadrillion Btu)']),
                 geo: String(renewable['Geothermal (quadrillion Btu)']),
+                biomass: String(renewable['Other biomass (quadrillion Btu)']),
                 wind: String(renewable['Wind power (quadrillion Btu)']),
-                solar: String(renewable['Solar (quadrillion Btu)'])
+                biofuels: String(renewable['Liquid biofuels (quadrillion Btu)']),
+                wood: String(renewable['Wood biomass (quadrillion Btu)']),
+                hydro: String(renewable['Hydropower (quadrillion Btu)'])
             };
         });
     };
 
+    this.getComplexFormat = function(simpleRenewables) {
+        return simpleRenewables.map(function(renewable) {
+            return {
+                'Year': renewable.year,
+                'Solar (quadrillion Btu)': renewable.solar,
+                'Geothermal (quadrillion Btu)': renewable.geo,
+                'Other biomass (quadrillion Btu)': renewable.biomass,
+                'Wind power (quadrillion Btu)': renewable.wind,
+                'Liquid biofuels (quadrillion Btu)': renewable.biofuels,
+                'Wood biomass (quadrillion Btu)': renewable.wood,
+                'Hydropower (quadrillion Btu)': renewable.hydro
+            };
+        });
+    };
 }
 
 elfApp.service('renewableUtils', RenewableUtils);

@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var Settings = require('../models/settings');
-var allMongo = require('./all-mongo');
 var connect = require('./connect');
 
 /* GET users listing. */
@@ -10,64 +9,38 @@ router.get('/', function(req, res, next) {
     res.send('respond with a resource');
 });
 
-var connected = false;
+// INSERT new one pass the client data
+function saveSettings(request, response) {
+    console.log('request body', request.body);
 
-router.get('/all-data', function(request, response) {
-    'use strict';
-    console.log('AllData route invoked.');
-    if (!connect.connected) {
-        connect.doConnection();
-    }
+    var newSettings = new Settings({
+        "keyNote": 'settings',
+        "dataSource": request.body.dataSource,
+        "dataType": request.body.dataType,
+        "comment": request.body.comment
+    });
 
-    function saveSettings(request, response) {
-        //'use strict';
-        console.log('request body', request.body);
+    console.log('inserting', newSettings.comment);
 
-        var newSettings = new Settings({
-            'keyNote': 'settings',
-            'dataSource': request.body.dataSource,
-            'dataType': request.body.dataType,
-            'comment': request.body.comment
-        });
+    newSettings.save(function(err) {
+        console.log('saved: ', newSettings.dataSource, newSettings.dataType, newSettings.comment);
+        response.send({ result: 'success', query: request.body});
 
-        console.log('inserting', newSettings.comment);
-
-        newSettings.save(function(err) {
-            if (err) {
-                response.send({
-                    result: 'err',
-                    err: err
-                });
-            } else {
-                //'use strict';
-                console.log('saved: ', newSettings.dataSource, newSettings.dataType, newSettings.comment);
-                response.send({
-                    result: 'success',
-                    query: request.body
-                });
-            }
-        });
-    }
-});
-
-router.get('/updateSettings', function(request, response) {
-    'use strict';
+    });
+}
+// try to find one keynote set to settings  update data from data send back to the client
+router.post('/updateSettings', function(request, response) {
     console.log('request body', request.body);
     if (!connect.connected) {
         connect.doConnection();
     }
 
-    Settings.findOne({
-        keyNote: 'settings'
-    }, function(err, doc) {
-        //'use strict';
+    Settings.findOne({keyNote: 'settings'}, function(err, doc) {
         console.log('findone', err, doc);
         if (err) {
-            response.send({
-                result: 'error'
-            });
+            response.send({result: 'error'});
         } else {
-            if (doc === null) {
+            if(doc === null) {
                 saveSettings(request, response);
             } else {
                 doc.dataType = request.body.dataType;
@@ -78,36 +51,22 @@ router.get('/updateSettings', function(request, response) {
         }
     });
 });
-
+// 4 fields in there see setting.js
 router.get('/getSettings', function(request, response) {
-    'use strict';
     console.log('request body', request.body);
     if (!connect.connected) {
         connect.doConnection();
     }
 
-    Settings.findOne({
-        keyNote: 'settings'
-    }, function(err, doc) {
-        //'use strict';
+    Settings.findOne({keyNote: 'settings'}, function(err, doc) {
         console.log('findone', err, doc);
         if (err) {
-            response.send({
-                result: 'error'
-            });
+            response.send({result: 'error'});
         } else {
-            if (doc === null) {
-                response.send({
-                    settings: { // undercase  its used in home.js line 7
-                        dataType: 'Database',
-                        dataSource: 'Local MongoDb',
-                        comment: 'Default Comment'
-                    }
-                });
+            if(doc === null) {
+                response.send({settings: {dataType: 'Database', dataSource: 'Local MongoDb', comment: 'Default Comment'}})
             } else {
-                response.send({
-                    settings: doc
-                });
+                response.send({settings: doc});
             }
         }
     });

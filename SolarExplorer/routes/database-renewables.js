@@ -34,7 +34,7 @@ router.get('/all-data', function(request, response) {
 
             response.send({
                 result: 'Success',
-                renewables: data
+                data: allData,
             });
         }
     });

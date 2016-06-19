@@ -19,18 +19,16 @@ elfApp.controller('RenewablesController', function($scope, $http, renewableUtils
         $http.get(urls[dataType])
             .then(function(res) {
                 renewableUtils.init(res.data);
-
-                if (settings.useDatabase) {
-                    $scope.simpleFormat = renewableUtils.getSimpleStringFormat();
-                    //$scope.renewable = renewableUtils.getComplexFormat(res.data.renewables);
-                } else {
-                    $scope.renewable = res.data;
-                }
-
-                renewableUtils.init(res.data);
                 $scope.renewable = res.data;
                 $scope.renewableUtils = renewableUtils;
-                //$scope.simpleFormat = renewableUtils.getSimpleStringFormat();
+                console.log('debug from server res.renewables', res.data);
+                console.log('debug from client  res.renewables processed', renewableUtils);
+                //if (settings.useDatabase) {
+
+              /// } else {
+                $scope.simpleFormat = renewableUtils.getSimpleStringFormat();
+                    //$scope.renewable = renewableUtils.getComplexFormat(res.data.renewables);
+              // }
             });
     };
 

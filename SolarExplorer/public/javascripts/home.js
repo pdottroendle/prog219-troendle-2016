@@ -27,7 +27,7 @@ elfApp.controller('HomeController', function($scope, $http, settings) {
         }, function(err) {
             console.log(err);
         });
-        console.log($scope.formData);
+        //console.log($scope.formData);
     };
 
     function readSettings() {

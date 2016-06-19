@@ -77,7 +77,7 @@ router.get('/getSettings', function(request, response) {
     'use strict';
     console.log('getSettings ------>', request.body);
 
-    var useLocalMongoDb = false; //request.body.dataSource.toLowerCase() === 'local mongodb';
+    var useLocalMongoDb = true; //request.body.dataSource.toLowerCase() === 'local mongodb';
     console.log('get client selection ---->', useLocalMongoDb);
     if (!connect.connected) {
         if (useLocalMongoDb) {
